@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Yi Credit Mobile",
+    "slug": "yi-credit-mobile",
+    "scheme": "yi-credit",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"]
+  }
+}

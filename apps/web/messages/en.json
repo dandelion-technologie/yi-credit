@@ -1,0 +1,54 @@
+{
+  "Metadata": {
+    "title": "Yi Credit Platform",
+    "description": "Monorepo starter with Next 14, Expo, Clerk, intl, Tailwind and more."
+  },
+  "Home": {
+    "badge": "Turbo + Next + Expo ready",
+    "headline": "Ship finance experiences faster",
+    "subhead": "Internationalized, authenticated and styled out of the box. Connect payments, storage, AI, and realtime in minutes.",
+    "primaryCta": "Launch dashboard",
+    "featureLabel": "Capabilities",
+    "featureTitle": "Everything wired for a credit platform",
+    "featureLink": "Healthcheck API",
+    "features": [
+      {
+        "title": "Authentication",
+        "body": "Clerk is pre-wired for multi-lingual sign-in/sign-up pages and protected routes.",
+        "tag": "Clerk"
+      },
+      {
+        "title": "Data",
+        "body": "Prisma + Postgres ready; add your schema, run generate, and start querying.",
+        "tag": "Prisma"
+      },
+      {
+        "title": "Files & Rich text",
+        "body": "UploadThing + S3, Tiptap, Quill and WangEditor for editing documents.",
+        "tag": "Content"
+      }
+    ],
+    "cta": {
+      "title": "Need sockets, AI streams, or webhooks? Hooks are scaffolded.",
+      "primary": "Open workspace"
+    },
+    "stack": {
+      "title": "Included stack",
+      "items": [
+        "Next.js App Router + next-intl + Clerk middleware",
+        "Tailwind + Ant Design + Radix Themes + next-themes",
+        "React Query 5 + Zustand + react-hook-form + zod",
+        "UploadThing + AWS S3 presigns, Stripe/Nodemailer hooks",
+        "PDF/docx generation, OpenAI + SSE streaming utilities"
+      ],
+      "link": "Docs soon"
+    },
+    "stats": {
+      "users": "Active users",
+      "suffix": "/mo",
+      "realtime": "Socket.IO hook point ready for live credit events.",
+      "ai": "OpenAI client + eventsource parser for streaming responses.",
+      "payments": "Stripe client placeholder for invoices and webhook flows."
+    }
+  }
+}

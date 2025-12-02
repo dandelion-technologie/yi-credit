@@ -1,0 +1,2 @@
+-- Optional seed/restore file for local Postgres
+-- \i db.sql

@@ -1,0 +1,54 @@
+{
+  "Metadata": {
+    "title": "易信平台",
+    "description": "基于 Next 14、Expo、Clerk、国际化与 Tailwind 的一体化脚手架。"
+  },
+  "Home": {
+    "badge": "Turbo + Next + Expo 就绪",
+    "headline": "更快交付金融体验",
+    "subhead": "开箱即用的多语言、认证与样式。几分钟接入支付、存储、AI 与实时能力。",
+    "primaryCta": "进入控制台",
+    "featureLabel": "能力",
+    "featureTitle": "信用平台常用模块",
+    "featureLink": "健康检查 API",
+    "features": [
+      {
+        "title": "认证",
+        "body": "Clerk 已集成多语言登录/注册页及受保护路由。",
+        "tag": "Clerk"
+      },
+      {
+        "title": "数据",
+        "body": "Prisma + Postgres 就绪；定义 schema、generate 后即可查询。",
+        "tag": "Prisma"
+      },
+      {
+        "title": "文件与富文本",
+        "body": "UploadThing + S3，内置 Tiptap、Quill、WangEditor 编辑体验。",
+        "tag": "内容"
+      }
+    ],
+    "cta": {
+      "title": "需要 sockets、AI 流或 webhook？已预留挂载点。",
+      "primary": "打开工作区"
+    },
+    "stack": {
+      "title": "内置技术栈",
+      "items": [
+        "Next.js App Router + next-intl + Clerk middleware",
+        "Tailwind + Ant Design + Radix Themes + next-themes",
+        "React Query 5 + Zustand + react-hook-form + zod",
+        "UploadThing + AWS S3 预签名、Stripe/Nodemailer 钩子",
+        "PDF/docx 生成、OpenAI + SSE streaming 工具"
+      ],
+      "link": "文档即将上线"
+    },
+    "stats": {
+      "users": "活跃用户",
+      "suffix": "/月",
+      "realtime": "Socket.IO 挂载点，实时信用事件已预留。",
+      "ai": "OpenAI 客户端 + eventsource parser，支持流式响应。",
+      "payments": "Stripe 客户端占位，用于发票与 webhook 流程。"
+    }
+  }
+}
