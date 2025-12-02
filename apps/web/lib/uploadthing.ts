@@ -1,5 +1,4 @@
-import { createUploadthing, type FileRouter } from "uploadthing/next";
-import { createNextRouteHandler } from "uploadthing/next-legacy";
+import { createUploadthing, type FileRouter, createRouteHandler } from "uploadthing/next";
 
 const f = createUploadthing();
 
@@ -11,6 +10,6 @@ export const fileRouter = {
 
 export type AppFileRouter = typeof fileRouter;
 
-export const { GET, POST } = createNextRouteHandler({
+export const { GET, POST } = createRouteHandler({
   router: fileRouter
 });

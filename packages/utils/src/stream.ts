@@ -20,12 +20,16 @@ export async function streamOpenAIChat({
   });
 
   for await (const chunk of response) {
-    const content = chunk.choices[0]?.delta?.content;
+    const content = chunk.choices[0]?.delta?.content as
+      | string
+      | Array<{ type?: string; text?: string }>
+      | null
+      | undefined;
     if (typeof content === "string") {
       onDelta(content);
     } else if (Array.isArray(content)) {
       content.forEach((part) => {
-        if (part.type === "text" && part.text) onDelta(part.text);
+        if (part?.type === "text" && part.text) onDelta(part.text);
       });
     }
   }

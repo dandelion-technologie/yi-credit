@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "moduleResolution": "node",
     "jsx": "react-native",
     "types": ["expo-router"]
   },
