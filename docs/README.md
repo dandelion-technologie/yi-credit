@@ -11,6 +11,7 @@
 ## 设计规范
 
 - [YICREDIT 品牌调色板 v0.1](./color-palette-v0.1.md)
+- [YICREDIT 网站素材准备清单 v0.1](./asset-requirements-v0.1.md)
 
 ## 记录规范
 

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="title desc">
+  <title id="title">YICREDIT contact icons</title>
+  <desc id="desc">Line icons for phone, email, and WeChat contact methods.</desc>
+  <defs>
+    <style>
+      .ring { fill: #05214a; stroke: #d8b44a; stroke-width: 4; }
+      .line { fill: none; stroke: #ffffff; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+      .accent { fill: none; stroke: #d8b44a; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <g transform="translate(40 30)">
+    <circle class="ring" cx="90" cy="90" r="82"/>
+    <g transform="translate(20 17) scale(0.78)">
+      <path class="line" d="M61 55c7-7 15-9 20-3l12 15c4 5 3 12-2 17l-5 5c9 17 23 31 40 40l5-5c5-5 12-6 17-2l15 12c6 5 4 13-3 20-9 9-23 10-39 3-22-10-44-32-54-54-7-16-6-30 3-39Z"/>
+      <path class="accent" d="M55 143c31 31 58 42 89 36"/>
+    </g>
+  </g>
+
+  <g transform="translate(270 30)">
+    <circle class="ring" cx="90" cy="90" r="82"/>
+    <rect class="line" x="43" y="59" width="94" height="68" rx="8"/>
+    <path class="line" d="M47 66l43 35 43-35"/>
+    <path class="accent" d="M58 133h64"/>
+  </g>
+
+  <g transform="translate(500 30)">
+    <circle class="ring" cx="90" cy="90" r="82"/>
+    <path class="line" d="M78 62c-24 0-43 15-43 35 0 12 7 22 18 29l-5 17 19-10c4 1 7 1 11 1 24 0 43-15 43-35s-19-37-43-37Z"/>
+    <path class="line" d="M112 91c20 2 35 15 35 32 0 10-6 19-15 25l5 14-17-8c-4 1-7 1-11 1-15 0-28-7-35-17"/>
+    <path fill="#ffffff" d="M65 95a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm28 0a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm7 31a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm24 0a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"/>
+  </g>
+</svg>
