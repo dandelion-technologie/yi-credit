@@ -1,9 +1,10 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import { getMessages, getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
 import type { Metadata } from "next";
-import { locales } from "../../lib/locales";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations, unstable_setRequestLocale } from "next-intl/server";
+
 import { Providers } from "../../components/providers";
+import { locales } from "../../lib/locales";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -31,7 +32,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Lay
     <ClerkProvider>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <Providers>
-          <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-slate-50">
+          <div className="min-h-screen bg-gradient-to-b from-yi-porcelain to-yi-paper text-yi-ink dark:from-yi-ink dark:to-yi-night dark:text-yi-mist">
             {children}
           </div>
         </Providers>

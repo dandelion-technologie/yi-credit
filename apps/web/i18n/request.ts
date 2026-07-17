@@ -1,5 +1,15 @@
 import { getRequestConfig } from "next-intl/server";
 
-export default getRequestConfig(async ({ locale }) => ({
-  messages: (await import(`../messages/${locale}.json`)).default
-}));
+import { locales } from "../lib/locales";
+
+type Locale = (typeof locales)[number];
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requestedLocale = await requestLocale;
+  const locale: Locale = locales.includes(requestedLocale as Locale) ? (requestedLocale as Locale) : "zh";
+
+  return {
+    locale,
+    messages: (await import(`../messages/${locale}.json`)).default
+  };
+});

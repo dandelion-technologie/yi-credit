@@ -1,26 +1,34 @@
-import Link from "next/link";
-import { Button, Card, Col, Divider, List, Row, Statistic, Tabs, Tag } from "antd";
+import { Button, Card, Col, Divider, Row, Statistic, Tabs, Tag } from "antd";
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
-import { getTranslations } from "next-intl/server";
-import { LocaleSwitcher } from "../../components/locale-switcher";
+import Link from "next/link";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export default async function HomePage() {
-  const t = await getTranslations("Home");
+import { LocaleSwitcher } from "../../components/locale-switcher";
+import { brandPalette } from "../../lib/brand-palette";
+
+type HomePageProps = {
+  params: { locale: string };
+};
+
+export default async function HomePage({ params: { locale } }: HomePageProps) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Home" });
   const features = t.raw("features") as Array<{ title: string; body: string; tag: string }>;
+  const stackItems = t.raw("stack.items") as string[];
 
   return (
     <main className="space-y-10 px-6 py-12 lg:px-12">
-      <section className="mx-auto max-w-6xl rounded-3xl bg-white/70 p-10 shadow-lg ring-1 ring-slate-100 backdrop-blur-sm dark:bg-slate-900/50 dark:ring-slate-800">
+      <section className="mx-auto max-w-6xl rounded-3xl bg-yi-paper/80 p-10 shadow-lg ring-1 ring-yi-line backdrop-blur-sm dark:bg-yi-night/80 dark:ring-yi-steel">
         <Row gutter={[24, 24]} align="middle">
           <Col xs={24} md={14}>
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700 ring-1 ring-blue-100 dark:bg-blue-500/10 dark:text-blue-100 dark:ring-blue-500/30">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-yi-mist px-4 py-1 text-sm font-medium text-yi-navy ring-1 ring-yi-line dark:bg-yi-blue/20 dark:text-yi-mist dark:ring-yi-steel">
               <Sparkles size={16} />
               {t("badge")}
             </div>
-            <h1 className="text-4xl font-bold leading-tight text-slate-900 dark:text-slate-50">
+            <h1 className="text-4xl font-bold leading-tight text-yi-ink dark:text-yi-paper">
               {t("headline")}
             </h1>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">{t("subhead")}</p>
+            <p className="mt-4 text-lg text-yi-slate dark:text-yi-mist">{t("subhead")}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button type="primary" size="large">
                 {t("primaryCta")}
@@ -52,14 +60,14 @@ export default async function HomePage() {
       <section className="mx-auto max-w-6xl space-y-6">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-wide text-blue-500">{t("featureLabel")}</p>
-            <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">
+            <p className="text-sm uppercase tracking-wide text-yi-blue">{t("featureLabel")}</p>
+            <h2 className="text-2xl font-semibold text-yi-ink dark:text-yi-paper">
               {t("featureTitle")}
             </h2>
           </div>
           <div className="flex items-center gap-3">
             <LocaleSwitcher />
-            <Link href="/api/health" className="text-blue-600 hover:underline">
+            <Link href="/api/health" className="text-yi-blue hover:underline">
               {t("featureLink")}
             </Link>
           </div>
@@ -69,19 +77,19 @@ export default async function HomePage() {
             <Col key={feature.title} xs={24} md={8}>
               <Card
                 title={<span className="font-semibold">{feature.title}</span>}
-                extra={<Tag color="processing">{feature.tag}</Tag>}
+                extra={<Tag color={brandPalette.blue}>{feature.tag}</Tag>}
               >
-                <p className="text-sm text-slate-600 dark:text-slate-300">{feature.body}</p>
+                <p className="text-sm text-yi-slate dark:text-yi-mist">{feature.body}</p>
               </Card>
             </Col>
           ))}
         </Row>
       </section>
 
-      <section className="mx-auto max-w-6xl rounded-2xl border border-dashed border-blue-200 bg-blue-50/60 p-8 text-slate-800 dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-50">
+      <section className="mx-auto max-w-6xl rounded-2xl border border-dashed border-yi-gold bg-yi-mist p-8 text-yi-ink dark:border-yi-gold dark:bg-yi-night dark:text-yi-mist">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-lg font-medium">
-            <ShieldCheck className="text-blue-500" />
+            <ShieldCheck className="text-yi-gold" />
             {t("cta.title")}
           </div>
           <div className="flex gap-3">
@@ -95,15 +103,13 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl rounded-2xl bg-white/70 p-8 shadow ring-1 ring-slate-100 dark:bg-slate-900/50 dark:ring-slate-800">
-        <h3 className="mb-4 text-xl font-semibold text-slate-900 dark:text-slate-50">
+      <section className="mx-auto max-w-6xl rounded-2xl bg-yi-paper/80 p-8 shadow ring-1 ring-yi-line dark:bg-yi-night/80 dark:ring-yi-steel">
+        <h3 className="mb-4 text-xl font-semibold text-yi-ink dark:text-yi-paper">
           {t("stack.title")}
         </h3>
-        <List
-          grid={{ gutter: 16, column: 3 }}
-          dataSource={t.raw("stack.items") as string[]}
-          renderItem={(item) => (
-            <List.Item>
+        <Row gutter={[16, 16]}>
+          {stackItems.map((item) => (
+            <Col key={item} xs={24} md={8}>
               <Card size="small" className="h-full">
                 <div className="flex h-full flex-col justify-between gap-2">
                   <span>{item}</span>
@@ -112,9 +118,9 @@ export default async function HomePage() {
                   </Button>
                 </div>
               </Card>
-            </List.Item>
-          )}
-        />
+            </Col>
+          ))}
+        </Row>
       </section>
     </main>
   );

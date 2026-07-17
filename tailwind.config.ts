@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { brandPalette } from "./apps/web/lib/brand-palette";
 
 const config: Config = {
   content: [
@@ -8,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        yi: {
+          DEFAULT: brandPalette.navy,
+          ...brandPalette
+        }
+      },
       fontFamily: {
         sans: ["'Noto Sans SC'", "'Inter'", "system-ui", "sans-serif"],
         display: ["'ZCOOL KuaiLe'", "system-ui", "sans-serif"]

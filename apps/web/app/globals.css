@@ -4,20 +4,30 @@
 
 :root {
   color-scheme: light;
+  --yi-paper: #ffffff;
+  --yi-porcelain: #f7f9fc;
+  --yi-mist: #eaf0f6;
+  --yi-line: #d1d7e0;
+  --yi-slate: #858d97;
+  --yi-ink: #05172e;
+  --yi-night: #05214a;
+  --yi-navy: #022a7a;
+  --yi-blue: #0b4ea2;
+  --yi-steel: #59789d;
+  --yi-gold: #d8b44a;
+  --yi-bronze: #967862;
 }
 
 body {
   font-family: var(--font-sans);
-  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 40%);
-  color: #0f172a;
+  background: linear-gradient(180deg, var(--yi-porcelain) 0%, var(--yi-paper) 42%);
+  color: var(--yi-ink);
   min-height: 100vh;
 }
 
 .dark body {
-  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(52, 211, 153, 0.12), transparent 30%),
-    #0b1120;
-  color: #e2e8f0;
+  background: linear-gradient(180deg, var(--yi-ink) 0%, var(--yi-night) 100%);
+  color: var(--yi-mist);
 }
 
 a {
@@ -27,4 +37,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: var(--yi-gold);
+  color: var(--yi-ink);
 }

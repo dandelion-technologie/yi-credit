@@ -1,8 +1,9 @@
 "use client";
 
 import { Select } from "antd";
-import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
+
 import { locales } from "../lib/locales";
 
 export function LocaleSwitcher() {
@@ -13,7 +14,7 @@ export function LocaleSwitcher() {
 
   return (
     <div className="flex items-center gap-2 text-sm">
-      <span className="text-slate-500">{t("featureLabel")}</span>
+      <span className="text-yi-slate">{t("featureLabel")}</span>
       <Select
         size="small"
         value={locale}
