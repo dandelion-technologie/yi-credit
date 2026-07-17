@@ -1,54 +1,212 @@
 {
   "Metadata": {
-    "title": "易信平台",
-    "description": "基于 Next 14、Expo、Clerk、国际化与 Tailwind 的一体化脚手架。"
+    "title": "YICREDIT 易信贷 | 法国贷款与融资咨询",
+    "description": "YICREDIT 易信贷为法国个人与企业提供房贷、企业融资、设备融资、消费贷款和债务整合咨询。"
   },
   "Home": {
-    "badge": "Turbo + Next + Expo 就绪",
-    "headline": "更快交付金融体验",
-    "subhead": "开箱即用的多语言、认证与样式。几分钟接入支付、存储、AI 与实时能力。",
-    "primaryCta": "进入控制台",
-    "featureLabel": "能力",
-    "featureTitle": "信用平台常用模块",
-    "featureLink": "健康检查 API",
-    "features": [
-      {
-        "title": "认证",
-        "body": "Clerk 已集成多语言登录/注册页及受保护路由。",
-        "tag": "Clerk"
-      },
-      {
-        "title": "数据",
-        "body": "Prisma + Postgres 就绪；定义 schema、generate 后即可查询。",
-        "tag": "Prisma"
-      },
-      {
-        "title": "文件与富文本",
-        "body": "UploadThing + S3，内置 Tiptap、Quill、WangEditor 编辑体验。",
-        "tag": "内容"
-      }
-    ],
-    "cta": {
-      "title": "需要 sockets、AI 流或 webhook？已预留挂载点。",
-      "primary": "打开工作区"
+    "nav": {
+      "language": "语言",
+      "services": "服务",
+      "approach": "优势",
+      "process": "流程",
+      "contact": "联系",
+      "cta": "立即咨询"
     },
-    "stack": {
-      "title": "内置技术栈",
-      "items": [
-        "Next.js App Router + next-intl + Clerk middleware",
-        "Tailwind + Ant Design + Radix Themes + next-themes",
-        "React Query 5 + Zustand + react-hook-form + zod",
-        "UploadThing + AWS S3 预签名、Stripe/Nodemailer 钩子",
-        "PDF/docx 生成、OpenAI + SSE streaming 工具"
+    "hero": {
+      "eyebrow": "法国持牌贷款经纪公司",
+      "headline": "在法国贷款，中文协助更省心",
+      "subhead": "房贷、企业融资、设备贷款、消费贷款、债务整合。易信贷帮您看条件、备材料、沟通银行。",
+      "primaryCta": "立即咨询",
+      "secondaryCta": "查看服务",
+      "panelEyebrow": "开始咨询",
+      "panelTitle": "告诉我们您的贷款需求",
+      "panelBody": "说明用途、金额和基本情况，我们会告诉您下一步需要准备什么。",
+      "scroll": "继续浏览",
+      "stats": [
+        {
+          "value": "ORIAS",
+          "label": "法国金融中介注册"
+        },
+        {
+          "value": "26008676",
+          "label": "注册号"
+        },
+        {
+          "value": "RCS Paris",
+          "label": "巴黎公司登记"
+        }
       ],
-      "link": "文档即将上线"
+      "quickLinks": [
+        {
+          "label": "个人贷款",
+          "value": "房贷、消费、再融资",
+          "href": "#services"
+        },
+        {
+          "label": "企业融资",
+          "value": "经营、设备、扩店",
+          "href": "#approach"
+        },
+        {
+          "label": "联系方式",
+          "value": "电话、邮箱、微信",
+          "href": "#contact"
+        }
+      ]
     },
-    "stats": {
-      "users": "活跃用户",
-      "suffix": "/月",
-      "realtime": "Socket.IO 挂载点，实时信用事件已预留。",
-      "ai": "OpenAI 客户端 + eventsource parser，支持流式响应。",
-      "payments": "Stripe 客户端占位，用于发票与 webhook 流程。"
+    "intro": {
+      "eyebrow": "YICREDIT",
+      "title": "为个人和企业提供在法贷款咨询",
+      "body": "用中文讲清贷款条件、所需材料和办理流程，让沟通更直接。",
+      "imageAlt": "巴黎商务街区与办公建筑",
+      "captionEyebrow": "Paris",
+      "caption": "巴黎注册，服务法国本地个人与企业客户。"
+    },
+    "editorial": {
+      "eyebrow": "我们怎么帮您",
+      "title": "先了解需求，再匹配方案",
+      "items": [
+        {
+          "title": "看条件",
+          "body": "先判断项目是否适合申请。"
+        },
+        {
+          "title": "备材料",
+          "body": "整理收入、企业、报价或房产资料。"
+        },
+        {
+          "title": "沟通银行",
+          "body": "协助对接银行和金融机构。"
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "融资服务",
+      "title": "常见贷款服务",
+      "body": "选择您的需求，直接咨询。",
+      "items": [
+        {
+          "title": "房产贷款",
+          "body": "自住房、投资房、贷款再融资。",
+          "image": "/assets/yicredit/services/service-property-loan.webp",
+          "alt": "房产模型与金币"
+        },
+        {
+          "title": "企业贷款",
+          "body": "创业、经营周转、企业发展融资。",
+          "image": "/assets/yicredit/services/service-business-loan.webp",
+          "alt": "企业融资资料与计算器"
+        },
+        {
+          "title": "餐饮设备融资",
+          "body": "新店开业、扩店升级、设备更新。",
+          "image": "/assets/yicredit/services/service-restaurant-equipment.webp",
+          "alt": "餐饮企业后厨设备"
+        },
+        {
+          "title": "消费贷款",
+          "body": "个人消费、生活计划、灵活融资。",
+          "image": "/assets/yicredit/services/service-consumer-loan.webp",
+          "alt": "个人消费贷款硬币规划"
+        },
+        {
+          "title": "债务整合",
+          "body": "整合多笔债务，减轻月供压力。",
+          "image": "/assets/yicredit/services/service-debt-restructuring.webp",
+          "alt": "债务重组现金流分析"
+        },
+        {
+          "title": "设备与项目融资",
+          "body": "设备采购、项目报价、企业资料准备。",
+          "image": "/assets/yicredit/services/service-equipment-detail.webp",
+          "alt": "设备融资文件与报价资料"
+        }
+      ]
+    },
+    "assurance": {
+      "eyebrow": "为什么选择易信贷",
+      "title": "信息清楚，沟通直接",
+      "body": "从第一次咨询到后续跟进，我们尽量把条件、材料和进度说明白。",
+      "imageAltPrimary": "设备融资资料细节",
+      "imageAltSecondary": "融资材料文件整理",
+      "items": [
+        {
+          "title": "持牌服务",
+          "body": "ORIAS 注册，RCS Paris 登记。"
+        },
+        {
+          "title": "中文沟通",
+          "body": "帮助您理解贷款条件和材料要求。"
+        },
+        {
+          "title": "持续跟进",
+          "body": "协助补充材料，跟进机构反馈。"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "服务流程",
+      "title": "四步开始咨询",
+      "body": "流程简单，重点清楚。",
+      "items": [
+        {
+          "step": "01",
+          "title": "说明需求",
+          "body": "告诉我们贷款用途、金额和时间。",
+          "image": "/assets/yicredit/process/process-consultation.webp",
+          "alt": "顾问与客户沟通融资需求"
+        },
+        {
+          "step": "02",
+          "title": "准备资料",
+          "body": "整理收入、企业或项目材料。",
+          "image": "/assets/yicredit/process/process-documents.webp",
+          "alt": "融资资料文件整理"
+        },
+        {
+          "step": "03",
+          "title": "匹配渠道",
+          "body": "根据情况沟通合适的机构。",
+          "image": "/assets/yicredit/process/process-bank-matching.webp",
+          "alt": "金融机构沟通场景"
+        },
+        {
+          "step": "04",
+          "title": "跟进结果",
+          "body": "协助补充信息并推进下一步。",
+          "image": "/assets/yicredit/process/process-approval.webp",
+          "alt": "融资文件签署"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "中文服务 · 专业可靠",
+      "title": "现在咨询贷款方案",
+      "body": "准备好您的基本情况，我们会协助判断可申请方向。",
+      "phone": "06 64 97 45 29",
+      "email": "xucheng@dandelion-intl.com",
+      "channels": [
+        {
+          "label": "电话",
+          "value": "06 64 97 45 29"
+        },
+        {
+          "label": "邮箱",
+          "value": "xucheng@dandelion-intl.com"
+        },
+        {
+          "label": "微信",
+          "value": "扫码添加 Mr. Victor"
+        }
+      ],
+      "qrAlt": "YICREDIT 微信咨询二维码",
+      "cta": "扫码咨询",
+      "emailCta": "发送邮件"
+    },
+    "footer": {
+      "company": "YICREDIT SAS",
+      "license": "COBSP immatriculée à l'ORIAS n° 26008676 · RCS Paris 102 332 640",
+      "note": "Intermédiaire en opérations de banque, sans maniement de fonds. 融资条件及审批以合作金融机构最终决定为准。"
     }
   }
 }

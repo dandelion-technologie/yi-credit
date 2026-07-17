@@ -27,16 +27,19 @@ export async function generateMetadata({ params: { locale } }: LayoutProps): Pro
 export default async function LocaleLayout({ children, params: { locale } }: LayoutProps) {
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
-
-  return (
-    <ClerkProvider>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <Providers>
-          <div className="min-h-screen bg-gradient-to-b from-yi-porcelain to-yi-paper text-yi-ink dark:from-yi-ink dark:to-yi-night dark:text-yi-mist">
-            {children}
-          </div>
-        </Providers>
-      </NextIntlClientProvider>
-    </ClerkProvider>
+  const page = (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <Providers>
+        <div className="min-h-screen bg-gradient-to-b from-yi-porcelain to-yi-paper text-yi-ink dark:from-yi-ink dark:to-yi-night dark:text-yi-mist">
+          {children}
+        </div>
+      </Providers>
+    </NextIntlClientProvider>
   );
+
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    return page;
+  }
+
+  return <ClerkProvider>{page}</ClerkProvider>;
 }

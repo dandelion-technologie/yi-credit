@@ -22,7 +22,9 @@ module.exports = {
       version: "detect"
     },
     "import/resolver": {
-      typescript: true
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      }
     },
     tailwindcss: {
       callees: ["cn", "clsx", "cva"]
@@ -30,6 +32,12 @@ module.exports = {
   },
   rules: {
     "react/react-in-jsx-scope": "off",
+    "import/no-unresolved": [
+      "error",
+      {
+        ignore: ["^@clerk/nextjs$", "^next-intl/server$", "^next-intl/plugin$", "^uploadthing/next$"]
+      }
+    ],
     "import/order": [
       "error",
       {

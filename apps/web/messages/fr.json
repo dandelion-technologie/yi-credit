@@ -1,0 +1,212 @@
+{
+  "Metadata": {
+    "title": "YICREDIT | Courtage en crédit et financement en France",
+    "description": "YICREDIT accompagne particuliers, professionnels et entreprises en France dans leurs projets de crédit immobilier, financement professionnel, équipement, trésorerie et regroupement de crédits."
+  },
+  "Home": {
+    "nav": {
+      "language": "Choisir la langue",
+      "services": "Services",
+      "approach": "Expertise",
+      "process": "Démarche",
+      "contact": "Contact",
+      "cta": "Nous contacter"
+    },
+    "hero": {
+      "eyebrow": "Courtier en opérations de banque en France",
+      "headline": "Un accompagnement clair pour vos projets de financement",
+      "subhead": "Crédit immobilier, financement professionnel, équipement, trésorerie ou regroupement de crédits : YICREDIT vous aide à structurer votre dossier et à identifier les interlocuteurs adaptés.",
+      "primaryCta": "Demander un échange",
+      "secondaryCta": "Nos services",
+      "panelEyebrow": "Analyse du projet",
+      "panelTitle": "Présentez-nous votre besoin",
+      "panelBody": "Nous examinons votre situation, l'objectif du financement et les éléments disponibles afin de préciser les prochaines étapes.",
+      "scroll": "Découvrir",
+      "stats": [
+        {
+          "value": "ORIAS",
+          "label": "Immatriculation intermédiaire"
+        },
+        {
+          "value": "26008676",
+          "label": "Numéro d'immatriculation"
+        },
+        {
+          "value": "RCS Paris",
+          "label": "Société enregistrée à Paris"
+        }
+      ],
+      "quickLinks": [
+        {
+          "label": "Particuliers",
+          "value": "Immobilier, crédit, refinancement",
+          "href": "#services"
+        },
+        {
+          "label": "Professionnels",
+          "value": "Trésorerie, équipement, développement",
+          "href": "#approach"
+        },
+        {
+          "label": "Contact",
+          "value": "Téléphone, email, WeChat",
+          "href": "#contact"
+        }
+      ]
+    },
+    "intro": {
+      "eyebrow": "YICREDIT",
+      "title": "Courtier en crédit pour particuliers et entreprises",
+      "body": "Un accompagnement en français, chinois et anglais pour clarifier les conditions, les pièces à fournir et les étapes de votre demande.",
+      "imageAlt": "Quartier d'affaires et immeubles de bureaux à Paris",
+      "captionEyebrow": "Paris",
+      "caption": "Société française immatriculée à Paris, au service de clients particuliers et professionnels."
+    },
+    "editorial": {
+      "eyebrow": "Notre accompagnement",
+      "title": "Structurer le dossier avant de solliciter les organismes",
+      "items": [
+        {
+          "title": "Évaluer la faisabilité",
+          "body": "Analyse du besoin, du montant, du délai et des éléments disponibles."
+        },
+        {
+          "title": "Préparer les pièces",
+          "body": "Revenus, activité professionnelle, devis, bilan ou documents immobiliers."
+        },
+        {
+          "title": "Orienter la demande",
+          "body": "Mise en relation avec des interlocuteurs financiers adaptés au projet."
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Solutions de crédit et de financement",
+      "body": "Un premier échange permet d'identifier le cadre le plus adapté à votre situation.",
+      "items": [
+        {
+          "title": "Crédit immobilier",
+          "body": "Résidence principale, investissement, refinancement.",
+          "image": "/assets/yicredit/services/service-property-loan.webp",
+          "alt": "Maquette immobilière et pièces"
+        },
+        {
+          "title": "Financement professionnel",
+          "body": "Création, trésorerie, développement d'activité.",
+          "image": "/assets/yicredit/services/service-business-loan.webp",
+          "alt": "Documents de financement et calculatrice"
+        },
+        {
+          "title": "Financement d'équipement",
+          "body": "Matériel, rénovation, extension ou renouvellement.",
+          "image": "/assets/yicredit/services/service-restaurant-equipment.webp",
+          "alt": "Équipement de cuisine professionnelle"
+        },
+        {
+          "title": "Crédit consommation",
+          "body": "Projets personnels et besoins de financement courants.",
+          "image": "/assets/yicredit/services/service-consumer-loan.webp",
+          "alt": "Préparation d'un crédit consommation"
+        },
+        {
+          "title": "Regroupement de crédits",
+          "body": "Regrouper plusieurs échéances dans une approche plus lisible.",
+          "image": "/assets/yicredit/services/service-debt-restructuring.webp",
+          "alt": "Analyse de trésorerie"
+        },
+        {
+          "title": "Financement de projet",
+          "body": "Dossier, devis, prévisionnel et éléments de présentation.",
+          "image": "/assets/yicredit/services/service-equipment-detail.webp",
+          "alt": "Documents et devis de financement d'équipement"
+        }
+      ]
+    },
+    "assurance": {
+      "eyebrow": "Pourquoi YICREDIT",
+      "title": "Un interlocuteur clair pour vos démarches de financement",
+      "body": "Nous privilégions une information simple, une préparation rigoureuse du dossier et un suivi lisible des échanges.",
+      "imageAltPrimary": "Détails d'un dossier de financement d'équipement",
+      "imageAltSecondary": "Organisation des documents de financement",
+      "items": [
+        {
+          "title": "Cadre professionnel",
+          "body": "Immatriculation ORIAS et enregistrement RCS Paris."
+        },
+        {
+          "title": "Communication multilingue",
+          "body": "Accompagnement en français, chinois et anglais selon le besoin."
+        },
+        {
+          "title": "Suivi du dossier",
+          "body": "Aide à la préparation, aux compléments et au suivi des retours."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Démarche",
+      "title": "Une démarche simple et structurée",
+      "body": "Chaque étape vise à rendre votre demande plus claire avant présentation.",
+      "items": [
+        {
+          "step": "01",
+          "title": "Comprendre le projet",
+          "body": "Objectif, montant, délai et situation générale.",
+          "image": "/assets/yicredit/process/process-consultation.webp",
+          "alt": "Conseiller échangeant avec un client"
+        },
+        {
+          "step": "02",
+          "title": "Constituer le dossier",
+          "body": "Sélection des pièces utiles et vérification des éléments clés.",
+          "image": "/assets/yicredit/process/process-documents.webp",
+          "alt": "Documents de financement organisés"
+        },
+        {
+          "step": "03",
+          "title": "Orienter la demande",
+          "body": "Recherche d'organismes ou de solutions adaptés au profil.",
+          "image": "/assets/yicredit/process/process-bank-matching.webp",
+          "alt": "Réunion avec un organisme financier"
+        },
+        {
+          "step": "04",
+          "title": "Suivre les échanges",
+          "body": "Accompagnement sur les retours, compléments et étapes suivantes.",
+          "image": "/assets/yicredit/process/process-approval.webp",
+          "alt": "Signature d'un dossier de financement"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Service multilingue · Accompagnement professionnel",
+      "title": "Échanger sur votre projet de financement",
+      "body": "Présentez votre situation et votre objectif. Nous vous indiquerons les premières pistes à étudier.",
+      "phone": "06 64 97 45 29",
+      "email": "xucheng@dandelion-intl.com",
+      "channels": [
+        {
+          "label": "Téléphone",
+          "value": "06 64 97 45 29"
+        },
+        {
+          "label": "Email",
+          "value": "xucheng@dandelion-intl.com"
+        },
+        {
+          "label": "WeChat",
+          "value": "Scannez pour ajouter Mr. Victor"
+        }
+      ],
+      "qrAlt": "QR code WeChat de consultation YICREDIT",
+      "cta": "Scanner pour nous contacter",
+      "emailCta": "Envoyer un email"
+    },
+    "footer": {
+      "company": "YICREDIT SAS",
+      "license": "COBSP immatriculée à l'ORIAS n° 26008676 · RCS Paris 102 332 640",
+      "note": "Intermédiaire en opérations de banque, sans maniement de fonds. Les conditions et accords de financement restent soumis à la décision finale des établissements partenaires."
+    }
+  }
+}

@@ -3,7 +3,8 @@ import { locales } from "./lib/locales";
 
 const config = defineRouting({
   locales,
-  defaultLocale: "en",
+  defaultLocale: "fr",
+  localeDetection: false,
   localePrefix: "always"
 });
 

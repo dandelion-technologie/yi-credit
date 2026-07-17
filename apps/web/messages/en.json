@@ -1,54 +1,212 @@
 {
   "Metadata": {
-    "title": "Yi Credit Platform",
-    "description": "Monorepo starter with Next 14, Expo, Clerk, intl, Tailwind and more."
+    "title": "YICREDIT | Loans and Financing in France",
+    "description": "YICREDIT supports individuals and businesses in France with property loans, business financing, equipment financing, consumer loans and debt consolidation."
   },
   "Home": {
-    "badge": "Turbo + Next + Expo ready",
-    "headline": "Ship finance experiences faster",
-    "subhead": "Internationalized, authenticated and styled out of the box. Connect payments, storage, AI, and realtime in minutes.",
-    "primaryCta": "Launch dashboard",
-    "featureLabel": "Capabilities",
-    "featureTitle": "Everything wired for a credit platform",
-    "featureLink": "Healthcheck API",
-    "features": [
-      {
-        "title": "Authentication",
-        "body": "Clerk is pre-wired for multi-lingual sign-in/sign-up pages and protected routes.",
-        "tag": "Clerk"
-      },
-      {
-        "title": "Data",
-        "body": "Prisma + Postgres ready; add your schema, run generate, and start querying.",
-        "tag": "Prisma"
-      },
-      {
-        "title": "Files & Rich text",
-        "body": "UploadThing + S3, Tiptap, Quill and WangEditor for editing documents.",
-        "tag": "Content"
-      }
-    ],
-    "cta": {
-      "title": "Need sockets, AI streams, or webhooks? Hooks are scaffolded.",
-      "primary": "Open workspace"
+    "nav": {
+      "language": "Language",
+      "services": "Services",
+      "approach": "Why us",
+      "process": "Process",
+      "contact": "Contact",
+      "cta": "Contact us"
     },
-    "stack": {
-      "title": "Included stack",
-      "items": [
-        "Next.js App Router + next-intl + Clerk middleware",
-        "Tailwind + Ant Design + Radix Themes + next-themes",
-        "React Query 5 + Zustand + react-hook-form + zod",
-        "UploadThing + AWS S3 presigns, Stripe/Nodemailer hooks",
-        "PDF/docx generation, OpenAI + SSE streaming utilities"
+    "hero": {
+      "eyebrow": "Licensed loan broker in France",
+      "headline": "Loans in France, explained clearly",
+      "subhead": "Property loans, business financing, equipment loans, consumer credit and debt consolidation. YICREDIT helps you check options, prepare documents and speak with banks.",
+      "primaryCta": "Contact us",
+      "secondaryCta": "View services",
+      "panelEyebrow": "Start here",
+      "panelTitle": "Tell us what you need",
+      "panelBody": "Share the purpose, amount and basic details. We will tell you what to prepare next.",
+      "scroll": "Explore",
+      "stats": [
+        {
+          "value": "ORIAS",
+          "label": "French intermediary register"
+        },
+        {
+          "value": "26008676",
+          "label": "Registration number"
+        },
+        {
+          "value": "RCS Paris",
+          "label": "Paris company registry"
+        }
       ],
-      "link": "Docs soon"
+      "quickLinks": [
+        {
+          "label": "Personal loans",
+          "value": "Property, credit, refinancing",
+          "href": "#services"
+        },
+        {
+          "label": "Business financing",
+          "value": "Operations, equipment, expansion",
+          "href": "#approach"
+        },
+        {
+          "label": "Contact",
+          "value": "Phone, email, WeChat",
+          "href": "#contact"
+        }
+      ]
     },
-    "stats": {
-      "users": "Active users",
-      "suffix": "/mo",
-      "realtime": "Socket.IO hook point ready for live credit events.",
-      "ai": "OpenAI client + eventsource parser for streaming responses.",
-      "payments": "Stripe client placeholder for invoices and webhook flows."
+    "intro": {
+      "eyebrow": "YICREDIT",
+      "title": "Loan guidance for people and businesses in France",
+      "body": "We explain loan conditions, documents and steps in clear language.",
+      "imageAlt": "Paris business district and office buildings",
+      "captionEyebrow": "Paris",
+      "caption": "Registered in Paris, serving local clients across France."
+    },
+    "editorial": {
+      "eyebrow": "How we help",
+      "title": "Understand the need, then find the right path",
+      "items": [
+        {
+          "title": "Check options",
+          "body": "We first review whether the project is realistic."
+        },
+        {
+          "title": "Prepare documents",
+          "body": "Income, business, quotation or property files."
+        },
+        {
+          "title": "Speak with banks",
+          "body": "We help communicate with banks and lenders."
+        }
+      ]
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Common loan services",
+      "body": "Choose your need and contact us directly.",
+      "items": [
+        {
+          "title": "Property Loans",
+          "body": "Home purchase, investment property, refinancing.",
+          "image": "/assets/yicredit/services/service-property-loan.webp",
+          "alt": "Property models and coins"
+        },
+        {
+          "title": "Business Loans",
+          "body": "Startup, working capital and business growth.",
+          "image": "/assets/yicredit/services/service-business-loan.webp",
+          "alt": "Business financing documents and calculator"
+        },
+        {
+          "title": "Restaurant Equipment",
+          "body": "Opening, expansion and equipment renewal.",
+          "image": "/assets/yicredit/services/service-restaurant-equipment.webp",
+          "alt": "Restaurant kitchen equipment"
+        },
+        {
+          "title": "Consumer Credit",
+          "body": "Personal projects and flexible financing.",
+          "image": "/assets/yicredit/services/service-consumer-loan.webp",
+          "alt": "Consumer credit coin planning"
+        },
+        {
+          "title": "Debt Consolidation",
+          "body": "Combine debts and reduce monthly pressure.",
+          "image": "/assets/yicredit/services/service-debt-restructuring.webp",
+          "alt": "Debt restructuring cash-flow analysis"
+        },
+        {
+          "title": "Equipment and Projects",
+          "body": "Purchase lists, quotations and business files.",
+          "image": "/assets/yicredit/services/service-equipment-detail.webp",
+          "alt": "Equipment financing documents and quotation materials"
+        }
+      ]
+    },
+    "assurance": {
+      "eyebrow": "Why choose YICREDIT",
+      "title": "Clear information, direct communication",
+      "body": "From first contact to follow-up, we keep conditions, documents and progress easy to understand.",
+      "imageAltPrimary": "Equipment financing material details",
+      "imageAltSecondary": "Financing document organization",
+      "items": [
+        {
+          "title": "Licensed service",
+          "body": "ORIAS registered and RCS Paris listed."
+        },
+        {
+          "title": "Clear communication",
+          "body": "We explain loan terms and document needs."
+        },
+        {
+          "title": "Ongoing follow-up",
+          "body": "We help complete files and follow feedback."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "Four simple steps",
+      "body": "Simple process, clear priorities.",
+      "items": [
+        {
+          "step": "01",
+          "title": "Tell us the need",
+          "body": "Purpose, amount and timing.",
+          "image": "/assets/yicredit/process/process-consultation.webp",
+          "alt": "Advisor discussing financing needs with client"
+        },
+        {
+          "step": "02",
+          "title": "Prepare files",
+          "body": "Income, business or project documents.",
+          "image": "/assets/yicredit/process/process-documents.webp",
+          "alt": "Financing documents being organized"
+        },
+        {
+          "step": "03",
+          "title": "Match lenders",
+          "body": "We contact suitable institutions.",
+          "image": "/assets/yicredit/process/process-bank-matching.webp",
+          "alt": "Financial institution meeting scene"
+        },
+        {
+          "step": "04",
+          "title": "Follow up",
+          "body": "We help with feedback and next steps.",
+          "image": "/assets/yicredit/process/process-approval.webp",
+          "alt": "Financing document signature"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Clear service · Reliable guidance",
+      "title": "Contact us for loan options",
+      "body": "Share your basic situation. We will help you understand possible next steps.",
+      "phone": "06 64 97 45 29",
+      "email": "xucheng@dandelion-intl.com",
+      "channels": [
+        {
+          "label": "Phone",
+          "value": "06 64 97 45 29"
+        },
+        {
+          "label": "Email",
+          "value": "xucheng@dandelion-intl.com"
+        },
+        {
+          "label": "WeChat",
+          "value": "Scan to add Mr. Victor"
+        }
+      ],
+      "qrAlt": "YICREDIT WeChat consultation QR code",
+      "cta": "Scan to contact us",
+      "emailCta": "Send email"
+    },
+    "footer": {
+      "company": "YICREDIT SAS",
+      "license": "COBSP registered with ORIAS no. 26008676 · RCS Paris 102 332 640",
+      "note": "Intermediary in banking operations, without handling client funds. Financing conditions and approvals are subject to the final decision of partner institutions."
     }
   }
 }
