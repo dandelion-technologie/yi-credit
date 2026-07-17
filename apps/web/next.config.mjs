@@ -1,6 +1,7 @@
 import createNextIntlPlugin from "next-intl/plugin";
 
-const withNextIntl = createNextIntlPlugin("./messages");
+// Use the default plugin setup so Next.js injects the virtual `next-intl/config` module.
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
