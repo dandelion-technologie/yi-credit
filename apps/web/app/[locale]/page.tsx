@@ -115,7 +115,7 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
               <h1 className="motion-fly-left motion-delay-1 mt-6 max-w-5xl font-serif text-[2.8rem] font-semibold leading-[1.06] tracking-normal text-white md:text-6xl lg:text-7xl">
                 {t("hero.headline")}
               </h1>
-              <p className="motion-fly-left motion-delay-2 mt-7 max-w-2xl text-base leading-8 text-white/82 md:text-lg">
+              <p className="motion-fly-left motion-delay-2 mt-7 max-w-2xl text-base leading-8 text-white/90 md:text-lg">
                 {t("hero.subhead")}
               </p>
 
@@ -129,37 +129,41 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                 </a>
                 <a
                   href="#services"
-                  className="inline-flex h-12 items-center justify-center border border-white/36 px-7 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
+                  className="inline-flex h-12 items-center justify-center border border-white/40 px-7 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:border-white hover:bg-white/10"
                 >
                   {t("hero.secondaryCta")}
                 </a>
               </div>
             </div>
 
-            <aside className="motion-fly-right motion-delay-4 border border-white/18 bg-white/[0.08] p-5 shadow-2xl shadow-yi-ink/40 backdrop-blur-2xl md:p-6">
-              <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-yi-gold">
-                {t("hero.panelEyebrow")}
-              </p>
-              <h2 className="mt-4 text-2xl font-semibold leading-tight">{t("hero.panelTitle")}</h2>
-              <p className="mt-4 text-sm leading-7 text-white/70">{t("hero.panelBody")}</p>
+            <aside className="motion-fly-right motion-delay-4 border border-white/25 bg-yi-ink/60 p-5 shadow-2xl shadow-yi-ink/40 backdrop-blur-2xl md:p-6">
+              <div className="flex items-start justify-between gap-6 border-b border-white/25 pb-5">
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-yi-gold">
+                    {t("hero.panelEyebrow")}
+                  </p>
+                  <h2 className="mt-3 text-2xl font-semibold leading-tight">{t("hero.panelTitle")}</h2>
+                </div>
+                <ShieldCheck className="mt-1 shrink-0 text-yi-gold" size={28} aria-hidden="true" />
+              </div>
 
-              <div className="mt-6 grid gap-3">
+              <dl className="mt-2 grid">
                 {heroStats.map((stat) => (
-                  <div key={stat.value} className="grid grid-cols-[112px_1fr] gap-4 border-t border-white/14 pt-3">
-                    <p className="text-sm font-semibold text-white">{stat.value}</p>
-                    <p className="text-xs leading-5 text-white/58">{stat.label}</p>
+                  <div key={stat.value} className="grid grid-cols-[1fr_auto] gap-4 border-b border-white/20 py-4">
+                    <dt className="text-sm leading-6 text-white/70">{stat.label}</dt>
+                    <dd className="text-right text-base font-semibold text-white">{stat.value}</dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </aside>
           </div>
 
-          <div className="motion-fly-up motion-delay-4 mt-8 grid border-y border-white/16 bg-yi-ink/26 backdrop-blur-xl md:grid-cols-3">
+          <div className="motion-fly-up motion-delay-4 mt-8 grid border-y border-white/20 bg-yi-ink/25 backdrop-blur-xl md:grid-cols-3">
             {heroQuickLinks.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-24 items-center justify-between gap-4 border-white/16 px-5 py-5 transition hover:bg-white/10 md:border-r md:last:border-r-0"
+                className="group flex min-h-24 items-center justify-between gap-4 border-white/20 px-5 py-5 transition hover:bg-white/10 md:border-r md:last:border-r-0"
               >
                 <span>
                   <span className="block text-[11px] font-bold uppercase tracking-[0.28em] text-yi-gold">
@@ -167,14 +171,14 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                   </span>
                   <span className="mt-2 block text-base font-semibold text-white">{item.value}</span>
                 </span>
-                <ArrowRight className="shrink-0 text-white/46 transition group-hover:translate-x-1 group-hover:text-white" size={18} />
+                <ArrowRight className="shrink-0 text-white/50 transition group-hover:translate-x-1 group-hover:text-white" size={18} />
               </a>
             ))}
           </div>
 
           <a
             href="#intro"
-            className="mt-5 hidden w-fit items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/55 transition hover:text-white md:inline-flex"
+            className="mt-5 hidden w-fit items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-white/60 transition hover:text-white md:inline-flex"
           >
             {t("hero.scroll")}
             <ChevronDown size={14} />
@@ -201,10 +205,10 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
               className="aspect-[16/9] w-full object-cover"
               priority
             />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yi-ink/55 to-transparent" />
-            <div className="absolute bottom-0 left-0 max-w-sm border border-white/15 bg-yi-ink/88 p-6 shadow-xl shadow-yi-ink/25 backdrop-blur-md">
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-yi-ink/60 to-transparent" />
+            <div className="absolute bottom-0 left-0 max-w-sm border border-white/20 bg-yi-ink/90 p-6 shadow-xl shadow-yi-ink/25 backdrop-blur-md">
               <p className="text-[11px] font-bold uppercase tracking-[0.26em] text-yi-gold">{t("intro.captionEyebrow")}</p>
-              <p className="mt-3 text-sm leading-7 text-white/82">{t("intro.caption")}</p>
+              <p className="mt-3 text-sm leading-7 text-white/90">{t("intro.caption")}</p>
             </div>
           </div>
         </div>
@@ -224,12 +228,12 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                 key={item.title}
                 data-reveal="right"
                 style={{ transitionDelay: `${index * 90}ms` }}
-                className="grid gap-5 border-t border-white/14 pt-7 sm:grid-cols-[80px_1fr]"
+                className="grid gap-5 border-t border-white/20 pt-7 sm:grid-cols-[80px_1fr]"
               >
                 <p className="font-serif text-4xl text-yi-gold">{String(index + 1).padStart(2, "0")}</p>
                 <div>
                   <h3 className="text-2xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/68">{item.body}</p>
+                  <p className="mt-3 text-sm leading-7 text-white/70">{item.body}</p>
                 </div>
               </article>
             ))}
@@ -270,7 +274,7 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-yi-ink via-yi-ink/50 to-transparent" />
                   <div className="relative flex h-full min-h-[430px] flex-col justify-end p-7 md:p-8">
-                    <div className="mb-5 flex h-12 w-12 items-center justify-center border border-yi-gold/62 bg-yi-ink/55 text-yi-gold backdrop-blur-sm">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center border border-yi-gold/60 bg-yi-ink/60 text-yi-gold backdrop-blur-sm">
                       <Icon size={22} />
                     </div>
                     <h3 className="text-2xl font-semibold">{service.title}</h3>
@@ -359,7 +363,7 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                       height={1000}
                       className="aspect-[8/5] w-full object-cover transition duration-700 group-hover:scale-[1.04]"
                     />
-                    <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center bg-white/92 text-yi-blue shadow-lg shadow-yi-ink/12">
+                    <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center bg-white/90 text-yi-blue shadow-lg shadow-yi-ink/10">
                       <Icon size={20} />
                     </div>
                   </div>
@@ -389,14 +393,14 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
           <div data-reveal="left" className="max-w-2xl">
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-yi-gold">{t("contact.eyebrow")}</p>
             <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight md:text-6xl">{t("contact.title")}</h2>
-            <p className="mt-7 text-base leading-8 text-white/76 md:text-lg">{t("contact.body")}</p>
+            <p className="mt-7 text-base leading-8 text-white/80 md:text-lg">{t("contact.body")}</p>
 
-            <div className="mt-10 grid gap-px overflow-hidden border border-white/14 bg-white/14 sm:grid-cols-3">
+            <div className="mt-10 grid gap-px overflow-hidden border border-white/20 bg-white/10 sm:grid-cols-3">
               {contactChannels.map((channel, index) => {
                 const Icon = index === 0 ? Phone : index === 1 ? Mail : MessageCircle;
 
                 return (
-                  <div key={channel.label} className="bg-yi-ink/54 p-5 backdrop-blur-md">
+                  <div key={channel.label} className="bg-yi-ink/60 p-5 backdrop-blur-md">
                     <Icon className="text-yi-gold" size={22} />
                     <p className="mt-3 text-[11px] uppercase tracking-[0.22em] text-white/50">{channel.label}</p>
                     <p className="mt-2 break-words text-sm font-semibold leading-6">{channel.value}</p>
@@ -406,7 +410,7 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
             </div>
           </div>
 
-          <aside data-reveal="right" className="bg-white p-5 text-center text-yi-ink shadow-2xl shadow-yi-ink/45 md:p-6">
+          <aside data-reveal="right" className="bg-white p-5 text-center text-yi-ink shadow-2xl shadow-yi-ink/40 md:p-6">
             <Image
               src="/assets/yicredit/contact/qr-wechat-mr-victor.png"
               alt={t("contact.qrAlt")}
@@ -415,25 +419,18 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
               className="mx-auto aspect-square w-full max-w-[320px] object-contain"
             />
             <p className="mx-auto mt-5 max-w-xs text-sm font-semibold leading-6">{t("contact.cta")}</p>
-            <a
-              href={`mailto:${t("contact.email")}`}
-              className="mt-6 inline-flex h-11 items-center justify-center gap-2 bg-yi-ink px-6 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-yi-blue"
-            >
-              {t("contact.emailCta")}
-              <ArrowRight size={15} />
-            </a>
           </aside>
         </div>
       </section>
 
       <footer className="bg-yi-ink px-5 py-10 text-white md:px-8">
-        <div className="mx-auto flex max-w-[1280px] flex-col gap-6 border-t border-white/12 pt-8 md:flex-row md:items-end md:justify-between">
+        <div className="mx-auto flex max-w-[1280px] flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-end md:justify-between">
           <div>
             <img src="/assets/yicredit/brand/logo-yicredit-white.svg" alt="YICREDIT" className="h-9 w-auto" />
             <p className="mt-5 text-sm font-semibold text-white">{t("footer.company")}</p>
-            <p className="mt-2 text-xs leading-6 text-white/55">{t("footer.license")}</p>
+            <p className="mt-2 text-xs leading-6 text-white/60">{t("footer.license")}</p>
           </div>
-          <p className="max-w-xl text-xs leading-6 text-white/45">{t("footer.note")}</p>
+          <p className="max-w-xl text-xs leading-6 text-white/50">{t("footer.note")}</p>
         </div>
       </footer>
     </main>

@@ -28,6 +28,7 @@ body {
   background: linear-gradient(180deg, var(--yi-porcelain) 0%, var(--yi-paper) 42%);
   color: var(--yi-ink);
   min-height: 100vh;
+  overflow-x: hidden;
   text-rendering: geometricPrecision;
 }
 

@@ -50,13 +50,13 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 py-4 md:px-8">
       <nav
-        className={`mx-auto flex h-16 max-w-[1440px] items-center justify-between border px-4 shadow-2xl backdrop-blur-xl transition-colors duration-300 md:h-[72px] md:px-7 ${
+        className={`mx-auto flex h-[72px] max-w-[1440px] items-center justify-between border px-4 shadow-2xl backdrop-blur-xl transition-colors duration-300 md:h-20 md:px-8 ${
           isLight
-            ? "border-yi-line bg-white text-yi-ink shadow-yi-ink/12"
-            : "border-white/20 bg-yi-ink text-white shadow-yi-ink/35"
+            ? "border-yi-line bg-white text-yi-ink shadow-yi-ink/10"
+            : "border-white/20 bg-yi-ink text-white shadow-yi-ink/30"
         }`}
       >
-        <Link href={`/${locale}`} className="flex min-w-0 items-center" aria-label="YICREDIT">
+        <Link href={`/${locale}`} className="flex min-w-0 shrink-0 items-center" aria-label="YICREDIT">
           <img
             src={
               isLight
@@ -64,12 +64,21 @@ export function SiteHeader() {
                 : "/assets/yicredit/brand/logo-yicredit-white.svg"
             }
             alt="YICREDIT"
-            className="h-8 w-auto md:h-10"
+            className="h-10 w-auto shrink-0 md:h-12"
           />
+          {locale === "zh" ? (
+            <span
+              className={`ml-4 hidden border-l pl-4 text-lg font-semibold tracking-[0.16em] md:inline-flex ${
+                isLight ? "border-yi-line text-yi-ink" : "border-white/20 text-white"
+              }`}
+            >
+              易信贷
+            </span>
+          ) : null}
         </Link>
 
         <div
-          className={`hidden items-center gap-8 text-[11px] font-bold uppercase tracking-[0.28em] lg:flex ${
+          className={`hidden min-w-0 flex-1 items-center justify-center gap-10 px-8 text-[15px] font-bold uppercase leading-none tracking-[0.12em] lg:flex xl:gap-14 xl:text-base ${
             isLight ? "text-yi-ink" : "text-white"
           }`}
         >
@@ -81,7 +90,7 @@ export function SiteHeader() {
           ].map((item) => (
             <a
               key={item.href}
-              className={`relative py-3 transition after:absolute after:inset-x-0 after:bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-yi-gold after:transition hover:after:scale-x-100 ${
+              className={`relative px-2 py-4 transition after:absolute after:inset-x-2 after:bottom-2 after:h-0.5 after:origin-left after:scale-x-0 after:bg-yi-gold after:transition hover:after:scale-x-100 ${
                 isLight ? "hover:text-yi-blue" : "hover:text-yi-gold"
               }`}
               href={item.href}
@@ -91,11 +100,11 @@ export function SiteHeader() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex shrink-0 items-center gap-2 md:gap-3">
           <LocaleSwitcher variant={theme} />
           <a
             href="#contact"
-            className={`hidden h-10 items-center gap-2 px-5 text-[11px] font-bold uppercase tracking-[0.18em] transition md:inline-flex ${
+            className={`hidden h-12 items-center gap-2 px-6 text-[13px] font-bold uppercase tracking-[0.12em] transition md:inline-flex ${
               isLight ? "bg-yi-ink text-white hover:bg-yi-blue" : "bg-yi-gold text-yi-ink hover:bg-white"
             }`}
           >

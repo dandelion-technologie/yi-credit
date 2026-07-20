@@ -82,7 +82,7 @@ export function LocaleSwitcher({ variant = "dark" }: LocaleSwitcherProps) {
         className={`flex h-10 cursor-pointer list-none items-center gap-2 border px-3 transition [&::-webkit-details-marker]:hidden ${
           isLight
             ? "border-yi-line bg-white text-yi-ink hover:border-yi-blue hover:bg-yi-porcelain"
-            : "border-white/35 bg-white/14 text-white hover:border-yi-gold/70 hover:bg-white/20"
+            : "border-white/30 bg-white/10 text-white hover:border-yi-gold/70 hover:bg-white/20"
         }`}
       >
         <Flag locale={activeLocale} />
