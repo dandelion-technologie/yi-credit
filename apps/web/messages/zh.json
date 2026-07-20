@@ -23,16 +23,12 @@
       "scroll": "继续浏览",
       "stats": [
         {
-          "value": "ORIAS",
-          "label": "法国金融中介注册"
-        },
-        {
           "value": "26008676",
-          "label": "注册号"
+          "label": "ORIAS注册号"
         },
         {
-          "value": "RCS Paris",
-          "label": "巴黎公司登记"
+          "value": "102332640",
+          "label": "SIREN号"
         }
       ],
       "quickLinks": [

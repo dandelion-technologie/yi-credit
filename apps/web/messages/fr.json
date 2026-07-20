@@ -23,16 +23,12 @@
       "scroll": "Découvrir",
       "stats": [
         {
-          "value": "ORIAS",
-          "label": "Immatriculation intermédiaire"
-        },
-        {
           "value": "26008676",
-          "label": "Numéro d'immatriculation"
+          "label": "Numéro ORIAS"
         },
         {
-          "value": "RCS Paris",
-          "label": "Société enregistrée à Paris"
+          "value": "102332640",
+          "label": "Numéro SIREN"
         }
       ],
       "quickLinks": [

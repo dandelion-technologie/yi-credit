@@ -23,16 +23,12 @@
       "scroll": "Explore",
       "stats": [
         {
-          "value": "ORIAS",
-          "label": "French intermediary register"
-        },
-        {
           "value": "26008676",
-          "label": "Registration number"
+          "label": "ORIAS number"
         },
         {
-          "value": "RCS Paris",
-          "label": "Paris company registry"
+          "value": "102332640",
+          "label": "SIREN number"
         }
       ],
       "quickLinks": [
