@@ -14,7 +14,7 @@ export const siteConfig = {
   siteUrl: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? fallbackSiteUrl),
   defaultLocale: "fr" as Locale,
   socialImage: "/assets/yicredit/seo/share-card-yicredit.png",
-  wechatImage: "/assets/yicredit/seo/wechat-share-yicredit.png",
+  wechatImage: "/wechat-share.png",
   icon: "/icon.png",
   appleIcon: "/apple-icon.png",
   email: "xucheng@dandelion-intl.com",

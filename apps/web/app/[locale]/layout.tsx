@@ -156,7 +156,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Lay
           height={512}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none fixed left-0 top-0 size-px opacity-0"
+          className="pointer-events-none absolute left-[-9999px] top-0 size-[300px] opacity-[0.01]"
         />
         <WechatShareConfig
           title={metadataMessages.title}
