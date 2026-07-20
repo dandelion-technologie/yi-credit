@@ -1,6 +1,7 @@
 import createIntlMiddleware from "next-intl/middleware";
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import type { NextFetchEvent, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import intlConfig from "./next-intl.config";
 
 const intlMiddleware = createIntlMiddleware(intlConfig);
@@ -24,6 +25,10 @@ const authMiddleware = clerkMiddleware((auth, req) => {
 });
 
 export default function middleware(req: NextRequest, event: NextFetchEvent) {
+  if (req.nextUrl.pathname.startsWith("/api/") || req.nextUrl.pathname.startsWith("/trpc/")) {
+    return NextResponse.next();
+  }
+
   if (!clerkEnabled) {
     return intlMiddleware(req);
   }
