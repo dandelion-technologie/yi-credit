@@ -1,13 +1,12 @@
 {
   "Metadata": {
     "title": "YICREDIT | Loans and Financing in France",
-    "description": "YICREDIT supports individuals and businesses in France with property loans, business financing, equipment financing, consumer loans and debt consolidation."
+    "description": "YICREDIT supports individuals and businesses in France with property loans, business financing, equipment financing, business factoring, consumer loans and debt consolidation."
   },
   "Home": {
     "nav": {
       "language": "Language",
       "services": "Services",
-      "approach": "Why us",
       "process": "Process",
       "contact": "Contact",
       "cta": "Contact us"
@@ -40,12 +39,12 @@
         {
           "label": "Business financing",
           "value": "Operations, equipment, expansion",
-          "href": "#approach"
+          "href": "#services"
         },
         {
-          "label": "Contact",
-          "value": "Phone, email, WeChat",
-          "href": "#contact"
+          "label": "Factoring",
+          "value": "Invoices, cash flow",
+          "href": "#services"
         }
       ]
     },
@@ -57,85 +56,52 @@
       "captionEyebrow": "Paris",
       "caption": "Registered in Paris, serving local clients across France."
     },
-    "editorial": {
-      "eyebrow": "How we help",
-      "title": "Understand the need, then find the right path",
-      "items": [
-        {
-          "title": "Check options",
-          "body": "We first review whether the project is realistic."
-        },
-        {
-          "title": "Prepare documents",
-          "body": "Income, business, quotation or property files."
-        },
-        {
-          "title": "Speak with banks",
-          "body": "We help communicate with banks and lenders."
-        }
-      ]
-    },
     "services": {
-      "eyebrow": "Services",
-      "title": "Common loan services",
-      "body": "Choose your need and contact us directly.",
+      "eyebrow": "Loan services",
+      "title": "Financing services",
+      "body": "Property loans, business financing, equipment, factoring and debt consolidation. A first conversation helps identify the right direction.",
       "items": [
         {
           "title": "Property Loans",
-          "body": "Home purchase, investment property, refinancing.",
+          "body": "For a main residence, investment property or refinancing. We help clarify income, down payment, debt level and the property documents needed.",
           "image": "/assets/yicredit/services/service-property-loan.webp",
           "alt": "Property models and coins"
         },
         {
           "title": "Business Loans",
-          "body": "Startup, working capital and business growth.",
+          "body": "For startup needs, working capital or business growth. The file is prepared around the company situation, use of funds and available financial documents.",
           "image": "/assets/yicredit/services/service-business-loan.webp",
           "alt": "Business financing documents and calculator"
         },
         {
           "title": "Restaurant Equipment",
-          "body": "Opening, expansion and equipment renewal.",
+          "body": "For restaurant openings, upgrades and equipment renewal. We can organize quotations, purchase lists and business information for lender review.",
           "image": "/assets/yicredit/services/service-restaurant-equipment.webp",
           "alt": "Restaurant kitchen equipment"
         },
         {
           "title": "Consumer Credit",
-          "body": "Personal projects and flexible financing.",
+          "body": "For personal projects and everyday financing needs. We help present the purpose, amount and repayment capacity in clear terms.",
           "image": "/assets/yicredit/services/service-consumer-loan.webp",
           "alt": "Consumer credit coin planning"
         },
         {
           "title": "Debt Consolidation",
-          "body": "Combine debts and reduce monthly pressure.",
+          "body": "For situations with several loans or heavy monthly payments. We review the existing structure and assess whether a clearer repayment setup may be possible.",
           "image": "/assets/yicredit/services/service-debt-restructuring.webp",
           "alt": "Debt restructuring cash-flow analysis"
         },
         {
           "title": "Equipment and Projects",
-          "body": "Purchase lists, quotations and business files.",
+          "body": "For equipment purchases, project launches or business expansion. We help gather quotations, budgets, company files and project details.",
           "image": "/assets/yicredit/services/service-equipment-detail.webp",
           "alt": "Equipment financing documents and quotation materials"
-        }
-      ]
-    },
-    "assurance": {
-      "eyebrow": "Why choose YICREDIT",
-      "title": "Clear information, direct communication",
-      "body": "From first contact to follow-up, we keep conditions, documents and progress easy to understand.",
-      "imageAltPrimary": "Equipment financing material details",
-      "imageAltSecondary": "Financing document organization",
-      "items": [
-        {
-          "title": "Licensed service",
-          "body": "ORIAS registered and RCS Paris listed."
         },
         {
-          "title": "Clear communication",
-          "body": "We explain loan terms and document needs."
-        },
-        {
-          "title": "Ongoing follow-up",
-          "body": "We help complete files and follow feedback."
+          "title": "Business Factoring",
+          "body": "For B2B companies that want to mobilize customer invoices before due date. We help organize invoices, payment terms and documents for factoring discussions.",
+          "image": "/assets/yicredit/process/process-documents.webp",
+          "alt": "Customer invoices and factoring documents"
         }
       ]
     },

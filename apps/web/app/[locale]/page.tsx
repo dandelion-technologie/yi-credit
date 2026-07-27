@@ -1,6 +1,5 @@
 import {
   ArrowRight,
-  BadgeCheck,
   BriefcaseBusiness,
   CheckCircle2,
   ChevronDown,
@@ -37,11 +36,6 @@ type HeroQuickLink = {
   href: string;
 };
 
-type TextBlock = {
-  title: string;
-  body: string;
-};
-
 type ServiceItem = {
   title: string;
   body: string;
@@ -62,7 +56,7 @@ type ContactChannel = {
   value: string;
 };
 
-const serviceIcons = [Home, BriefcaseBusiness, Utensils, WalletCards, RefreshCw, Landmark];
+const serviceIcons = [Home, BriefcaseBusiness, Utensils, WalletCards, RefreshCw, Landmark, FileText];
 const processIcons = [MessageCircle, FileText, Landmark, ClipboardCheck];
 
 export default async function HomePage({ params: { locale } }: HomePageProps) {
@@ -71,8 +65,6 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
 
   const heroStats = t.raw("hero.stats") as HeroStat[];
   const heroQuickLinks = t.raw("hero.quickLinks") as HeroQuickLink[];
-  const editorialItems = t.raw("editorial.items") as TextBlock[];
-  const assuranceItems = t.raw("assurance.items") as TextBlock[];
   const services = t.raw("services.items") as ServiceItem[];
   const processSteps = t.raw("process.items") as ProcessItem[];
   const contactChannels = t.raw("contact.channels") as ContactChannel[];
@@ -214,33 +206,6 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
         </div>
       </section>
 
-      <section data-nav-theme="dark" id="approach" className="bg-yi-ink px-5 py-20 text-white md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-[1280px] gap-14 lg:grid-cols-[1fr_1fr]">
-          <div data-reveal="left">
-            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-yi-gold">{t("editorial.eyebrow")}</p>
-            <h2 className="mt-5 max-w-xl font-serif text-4xl font-semibold leading-tight md:text-6xl">
-              {t("editorial.title")}
-            </h2>
-          </div>
-          <div className="grid gap-8">
-            {editorialItems.map((item, index) => (
-              <article
-                key={item.title}
-                data-reveal="right"
-                style={{ transitionDelay: `${index * 90}ms` }}
-                className="grid gap-5 border-t border-white/20 pt-7 sm:grid-cols-[80px_1fr]"
-              >
-                <p className="font-serif text-4xl text-yi-gold">{String(index + 1).padStart(2, "0")}</p>
-                <div>
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/70">{item.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section data-nav-theme="light" id="services" className="bg-yi-porcelain px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1440px]">
           <div data-reveal="up" className="mx-auto max-w-3xl text-center">
@@ -251,19 +216,17 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
             <p className="mt-6 text-base leading-8 text-yi-slate">{t("services.body")}</p>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-6">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-12">
             {services.map((service, index) => {
               const Icon = serviceIcons[index] ?? CheckCircle2;
-              const isWide = index === 0 || index === 2;
+              const columnClass = index < 2 || index > 4 ? "xl:col-span-6" : "xl:col-span-4";
 
               return (
                 <article
                   key={service.title}
                   data-reveal="up"
                   style={{ transitionDelay: `${index * 70}ms` }}
-                  className={`group relative min-h-[430px] overflow-hidden bg-yi-ink text-white ${
-                    isWide ? "xl:col-span-3" : "xl:col-span-2"
-                  }`}
+                  className={`group relative min-h-[430px] overflow-hidden bg-yi-ink text-white ${columnClass}`}
                 >
                   <Image
                     src={service.image}
@@ -283,53 +246,6 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                 </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section data-nav-theme="light" className="bg-white px-5 py-20 md:px-8 md:py-28">
-        <div className="mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div data-reveal="left" className="grid gap-5 sm:grid-cols-2">
-            <Image
-              src="/assets/yicredit/services/service-equipment-detail.webp"
-              alt={t("assurance.imageAltPrimary")}
-              width={1800}
-              height={1200}
-              className="aspect-[3/4] h-full w-full object-cover"
-            />
-            <Image
-              src="/assets/yicredit/process/process-documents.webp"
-              alt={t("assurance.imageAltSecondary")}
-              width={1600}
-              height={1000}
-              className="aspect-[3/4] h-full w-full translate-y-8 object-cover sm:translate-y-12"
-            />
-          </div>
-
-          <div data-reveal="right" className="lg:pl-8">
-            <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-yi-blue">{t("assurance.eyebrow")}</p>
-            <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight text-yi-ink md:text-6xl">
-              {t("assurance.title")}
-            </h2>
-            <p className="mt-7 text-base leading-8 text-yi-slate md:text-lg">{t("assurance.body")}</p>
-
-            <div className="mt-9 grid gap-5">
-              {assuranceItems.map((item, index) => {
-                const Icon = index === 0 ? BadgeCheck : index === 1 ? ShieldCheck : CheckCircle2;
-
-                return (
-                  <article key={item.title} className="grid grid-cols-[44px_1fr] gap-4 border-t border-yi-line pt-5">
-                    <div className="flex h-11 w-11 items-center justify-center bg-yi-porcelain text-yi-blue">
-                      <Icon size={21} />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-yi-ink">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-yi-slate">{item.body}</p>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>

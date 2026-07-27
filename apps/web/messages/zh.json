@@ -1,13 +1,12 @@
 {
   "Metadata": {
     "title": "YICREDIT 易信贷 | 法国贷款与融资咨询",
-    "description": "YICREDIT 易信贷为法国个人与企业提供房贷、企业融资、设备融资、消费贷款和债务整合咨询。"
+    "description": "YICREDIT 易信贷为法国个人与企业提供房贷、企业融资、设备融资、企业保理、消费贷款和债务整合咨询。"
   },
   "Home": {
     "nav": {
       "language": "语言",
       "services": "服务",
-      "approach": "优势",
       "process": "流程",
       "contact": "联系",
       "cta": "立即咨询"
@@ -40,12 +39,12 @@
         {
           "label": "企业融资",
           "value": "经营、设备、扩店",
-          "href": "#approach"
+          "href": "#services"
         },
         {
-          "label": "联系方式",
-          "value": "电话、邮箱、微信",
-          "href": "#contact"
+          "label": "企业保理",
+          "value": "应收账款、现金流",
+          "href": "#services"
         }
       ]
     },
@@ -54,88 +53,55 @@
       "title": "为个人和企业提供在法贷款咨询",
       "body": "用中文讲清贷款条件、所需材料和办理流程，让沟通更直接。",
       "imageAlt": "巴黎商务街区与办公建筑",
-      "captionEyebrow": "Paris",
+      "captionEyebrow": "巴黎",
       "caption": "巴黎注册，服务法国本地个人与企业客户。"
     },
-    "editorial": {
-      "eyebrow": "我们怎么帮您",
-      "title": "先了解需求，再匹配方案",
-      "items": [
-        {
-          "title": "看条件",
-          "body": "先判断项目是否适合申请。"
-        },
-        {
-          "title": "备材料",
-          "body": "整理收入、企业、报价或房产资料。"
-        },
-        {
-          "title": "沟通银行",
-          "body": "协助对接银行和金融机构。"
-        }
-      ]
-    },
     "services": {
-      "eyebrow": "融资服务",
-      "title": "常见贷款服务",
-      "body": "选择您的需求，直接咨询。",
+      "eyebrow": "常见贷款服务",
+      "title": "融资服务项目",
+      "body": "覆盖个人贷款、企业融资和企业保理等常见需求。先说明情况，再判断适合沟通的方向。",
       "items": [
         {
           "title": "房产贷款",
-          "body": "自住房、投资房、贷款再融资。",
+          "body": "用于自住房、投资房或贷款再融资。我们协助梳理收入、首付、负债和房产资料，让申请条件更清楚。",
           "image": "/assets/yicredit/services/service-property-loan.webp",
           "alt": "房产模型与金币"
         },
         {
           "title": "企业贷款",
-          "body": "创业、经营周转、企业发展融资。",
+          "body": "适合创业、经营周转和企业发展资金需求。根据营业情况、财务材料和资金用途，协助准备可沟通的融资资料。",
           "image": "/assets/yicredit/services/service-business-loan.webp",
           "alt": "企业融资资料与计算器"
         },
         {
           "title": "餐饮设备融资",
-          "body": "新店开业、扩店升级、设备更新。",
+          "body": "面向餐饮新店开业、扩店升级和设备更新。可围绕设备报价、采购清单和经营资料整理融资需求。",
           "image": "/assets/yicredit/services/service-restaurant-equipment.webp",
           "alt": "餐饮企业后厨设备"
         },
         {
           "title": "消费贷款",
-          "body": "个人消费、生活计划、灵活融资。",
+          "body": "用于个人消费、家庭计划或短中期资金安排。我们协助说明用途、金额和还款能力，减少沟通成本。",
           "image": "/assets/yicredit/services/service-consumer-loan.webp",
           "alt": "个人消费贷款硬币规划"
         },
         {
           "title": "债务整合",
-          "body": "整合多笔债务，减轻月供压力。",
+          "body": "适合已有多笔贷款或月供压力较高的情况。通过重新梳理负债结构，评估是否存在更清晰的还款安排。",
           "image": "/assets/yicredit/services/service-debt-restructuring.webp",
           "alt": "债务重组现金流分析"
         },
         {
           "title": "设备与项目融资",
-          "body": "设备采购、项目报价、企业资料准备。",
+          "body": "用于设备采购、项目启动或业务扩张。协助整理报价、预算、企业资料和项目说明，便于向机构说明需求。",
           "image": "/assets/yicredit/services/service-equipment-detail.webp",
           "alt": "设备融资文件与报价资料"
-        }
-      ]
-    },
-    "assurance": {
-      "eyebrow": "为什么选择易信贷",
-      "title": "信息清楚，沟通直接",
-      "body": "从第一次咨询到后续跟进，我们尽量把条件、材料和进度说明白。",
-      "imageAltPrimary": "设备融资资料细节",
-      "imageAltSecondary": "融资材料文件整理",
-      "items": [
-        {
-          "title": "持牌服务",
-          "body": "ORIAS 注册，RCS Paris 登记。"
         },
         {
-          "title": "中文沟通",
-          "body": "帮助您理解贷款条件和材料要求。"
-        },
-        {
-          "title": "持续跟进",
-          "body": "协助补充材料，跟进机构反馈。"
+          "title": "企业保理服务",
+          "body": "适合有企业客户应收账款、希望提前回笼现金流的企业。协助梳理发票、客户账期和资料，沟通企业保理相关方案。",
+          "image": "/assets/yicredit/process/process-documents.webp",
+          "alt": "企业保理发票和应收账款资料"
         }
       ]
     },
@@ -200,8 +166,8 @@
     },
     "footer": {
       "company": "YICREDIT SAS",
-      "license": "COBSP immatriculée à l'ORIAS n° 26008676 · RCS Paris 102 332 640",
-      "note": "Intermédiaire en opérations de banque, sans maniement de fonds. 融资条件及审批以合作金融机构最终决定为准。"
+      "license": "法国贷款经纪机构 · ORIAS 注册号 26008676 · SIREN 102332640 · 巴黎商业登记",
+      "note": "银行业务中介服务，不经手客户资金。融资条件及审批以合作金融机构最终决定为准。"
     }
   }
 }

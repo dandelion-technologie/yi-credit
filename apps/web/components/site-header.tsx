@@ -84,7 +84,6 @@ export function SiteHeader() {
         >
           {[
             { href: "#services", label: t("services") },
-            { href: "#approach", label: t("approach") },
             { href: "#process", label: t("process") },
             { href: "#contact", label: t("contact") }
           ].map((item) => (
