@@ -7,6 +7,7 @@
     "nav": {
       "language": "语言",
       "services": "服务",
+      "advantages": "优势",
       "process": "流程",
       "contact": "联系",
       "cta": "立即咨询"
@@ -56,10 +57,54 @@
       "captionEyebrow": "巴黎",
       "caption": "巴黎注册，服务法国本地个人与企业客户。"
     },
+    "advantages": {
+      "eyebrow": "独立建议",
+      "title": "为什么选择 YICREDIT？",
+      "summary": "客户利益永远放在第一位，收费公开透明，建议保持独立、专业和客观。",
+      "expand": "展开阅读",
+      "items": [
+        {
+          "title": "我们只为客户服务",
+          "paragraphs": [
+            "在 YICREDIT，我们始终坚持一个简单而坚定的原则：客户的利益永远放在第一位。",
+            "我们选择独立的经营模式，不接受任何金融机构的佣金，也不会因为任何商业利益而影响我们的专业判断。我们的每一项建议，都只基于客户的实际需求和最佳利益。",
+            "我们相信，真正值得信赖的贷款顾问，不应该因为佣金而推荐产品，而应该因为专业而赢得客户的信任。"
+          ]
+        },
+        {
+          "title": "收费公开透明",
+          "paragraphs": [
+            "透明，是建立信任的基础。",
+            "YICREDIT 坚持公开透明的收费原则，所有服务费用都会在合作开始前向客户明确说明。",
+            "您始终清楚知道自己支付了什么，以及为什么支付。"
+          ],
+          "bullets": [
+            "没有隐藏费用",
+            "没有额外收费",
+            "没有任何意外成本"
+          ]
+        },
+        {
+          "title": "独立 · 专业 · 客观",
+          "paragraphs": [
+            "每一位客户都有不同的融资需求。",
+            "我们会全面分析您的财务状况、融资目标以及市场环境，为您寻找真正适合您的融资方案，而不是推荐能够为我们带来更多收益的金融产品。",
+            "独立，是我们的原则；专业，是我们的责任；客户利益，始终是我们的唯一出发点。"
+          ]
+        },
+        {
+          "title": "我们的承诺",
+          "paragraphs": [
+            "您的利益，永远高于任何佣金。"
+          ]
+        }
+      ]
+    },
     "services": {
       "eyebrow": "常见贷款服务",
       "title": "融资服务项目",
       "body": "覆盖个人贷款、企业融资和企业保理等常见需求。先说明情况，再判断适合沟通的方向。",
+      "moreCta": "更多融资解决方案请联系我们",
       "items": [
         {
           "title": "房产贷款",
@@ -72,6 +117,12 @@
           "body": "适合创业、经营周转和企业发展资金需求。根据营业情况、财务材料和资金用途，协助准备可沟通的融资资料。",
           "image": "/assets/yicredit/services/service-business-loan.webp",
           "alt": "企业融资资料与计算器"
+        },
+        {
+          "title": "企业短期周转贷款",
+          "body": "YICREDIT 企业短期周转贷款，最高 5 万欧元，期限 6 个月。适合企业短期资金安排和临时周转需求。",
+          "image": "/assets/yicredit/services/service-business-loan.webp",
+          "alt": "企业短期周转融资资料"
         },
         {
           "title": "餐饮设备融资",
@@ -105,64 +156,89 @@
         }
       ]
     },
+    "warning": {
+      "title": "YICREDIT 提醒您：",
+      "body": "贷款意味着您需要承担还款义务。在签订贷款合同之前，请确认您具备相应的还款能力。"
+    },
     "process": {
-      "eyebrow": "服务流程",
-      "title": "四步开始咨询",
-      "body": "流程简单，重点清楚。",
+      "eyebrow": "YICREDIT",
+      "title": "服务流程",
+      "body": "从首次联系到渠道推进，我们按清晰步骤处理您的委托。",
       "items": [
         {
           "step": "01",
-          "title": "说明需求",
-          "body": "告诉我们贷款用途、金额和时间。",
+          "title": "联系我们",
+          "body": "通过邮件、电话或微信等第三方工具与我们联系，了解服务内容和收费方式。",
           "image": "/assets/yicredit/process/process-consultation.webp",
-          "alt": "顾问与客户沟通融资需求"
+          "alt": "客户联系 YICREDIT 了解融资服务"
         },
         {
           "step": "02",
-          "title": "准备资料",
-          "body": "整理收入、企业或项目材料。",
+          "title": "说明需求，分析方案",
+          "body": "说明贷款用途、金额、时间和基本情况，我们据此分析可沟通的融资方向。",
           "image": "/assets/yicredit/process/process-documents.webp",
-          "alt": "融资资料文件整理"
+          "alt": "贷款需求说明和方案分析"
         },
         {
           "step": "03",
-          "title": "匹配渠道",
-          "body": "根据情况沟通合适的机构。",
+          "title": "共同准备资料",
+          "body": "我们与客户共同整理资料，并在办理过程中随时提供即时资讯和补充建议。",
           "image": "/assets/yicredit/process/process-bank-matching.webp",
-          "alt": "金融机构沟通场景"
+          "alt": "客户与顾问共同准备融资资料"
         },
         {
           "step": "04",
-          "title": "跟进结果",
-          "body": "协助补充信息并推进下一步。",
+          "title": "匹配渠道，跟进结果",
+          "body": "我们会在专门渠道内推进客户委托，持续跟进反馈，争取更合适的结果。",
           "image": "/assets/yicredit/process/process-approval.webp",
-          "alt": "融资文件签署"
+          "alt": "融资渠道匹配和结果跟进"
         }
       ]
     },
     "contact": {
-      "eyebrow": "中文服务 · 专业可靠",
-      "title": "现在咨询贷款方案",
-      "body": "准备好您的基本情况，我们会协助判断可申请方向。",
+      "eyebrow": "联系方式",
+      "title": "联系 YICREDIT",
+      "body": "优先通过电话或邮箱联系。微信和 WhatsApp 可用于补充沟通、资料确认和后续跟进。",
       "phone": "06 64 97 45 29",
       "email": "xucheng@dandelion-intl.com",
-      "channels": [
+      "primary": [
         {
           "label": "电话",
-          "value": "06 64 97 45 29"
+          "value": "06 64 97 45 29",
+          "note": "优先联系方式，适合快速说明需求。",
+          "href": "tel:+33664974529"
         },
         {
           "label": "邮箱",
-          "value": "xucheng@dandelion-intl.com"
-        },
-        {
-          "label": "微信",
-          "value": "扫码添加 Mr. Victor"
+          "value": "xucheng@dandelion-intl.com",
+          "note": "适合发送需求说明、资料和项目文件。",
+          "href": "mailto:xucheng@dandelion-intl.com"
         }
       ],
-      "qrAlt": "YICREDIT 微信咨询二维码",
-      "cta": "扫码咨询",
-      "emailCta": "发送邮件"
+      "qrTitle": "第三方联系方式",
+      "qrBody": "微信和 WhatsApp 二维码分别对应不同联系方式，请根据需要扫码添加。",
+      "qrChannels": [
+        {
+          "label": "微信",
+          "lines": [
+            "微信咨询二维码",
+            "添加 Mr. Victor"
+          ],
+          "image": "/assets/yicredit/contact/qr-wechat-mr-victor.png",
+          "imageAlt": "微信咨询二维码，添加 Mr. Victor"
+        },
+        {
+          "label": "WhatsApp",
+          "lines": [
+            "WhatsApp 联系人二维码",
+            "添加 Xu Cheng"
+          ],
+          "image": "/assets/yicredit/contact/qr-whatsapp-xu-cheng.png",
+          "imageAlt": "WhatsApp 联系人二维码，添加 Xu Cheng",
+          "href": "https://wa.me/qr/HMZWJ6CQTDE5H1",
+          "action": "打开 WhatsApp"
+        }
+      ]
     },
     "footer": {
       "company": "YICREDIT SAS",

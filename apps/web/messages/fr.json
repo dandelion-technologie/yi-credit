@@ -7,6 +7,7 @@
     "nav": {
       "language": "Choisir la langue",
       "services": "Services",
+      "advantages": "Avantages",
       "process": "Démarche",
       "contact": "Contact",
       "cta": "Nous contacter"
@@ -56,10 +57,48 @@
       "captionEyebrow": "Paris",
       "caption": "Société française immatriculée à Paris, au service de clients particuliers et professionnels."
     },
+    "advantages": {
+      "eyebrow": "Conseil indépendant",
+      "title": "Pourquoi choisir YICREDIT ?",
+      "summary": "Une seule priorité : défendre vos intérêts, avec une rémunération claire et sans commission bancaire.",
+      "expand": "Lire la suite",
+      "items": [
+        {
+          "title": "Une seule priorité : défendre vos intérêts",
+          "paragraphs": [
+            "Chez YICREDIT, nous avons fait un choix clair : nous exerçons notre activité sous le statut de COBSP avec un modèle de rémunération exclusivement orienté vers nos clients.",
+            "Contrairement aux modèles reposant sur les commissions versées par les établissements financiers, nous ne percevons aucune commission bancaire. Notre seule mission est de rechercher la solution de financement la plus adaptée à votre situation, sans influence commerciale ni conflit d'intérêts.",
+            "Parce que votre projet mérite un conseil indépendant."
+          ]
+        },
+        {
+          "title": "Une transparence totale",
+          "paragraphs": [
+            "Nous croyons qu'une relation de confiance commence par une tarification claire.",
+            "La transparence n'est pas une option, c'est un engagement."
+          ],
+          "bullets": [
+            "Aucun frais caché.",
+            "Des honoraires annoncés à l'avance.",
+            "Aucun coût imprévu pendant le traitement de votre dossier.",
+            "Vous savez précisément ce que vous payez et pourquoi vous le payez."
+          ]
+        },
+        {
+          "title": "Un accompagnement indépendant",
+          "paragraphs": [
+            "Chaque dossier est unique.",
+            "Nous analysons votre situation financière, vos objectifs et les solutions disponibles afin de construire un financement adapté à vos besoins, et non à ceux d'un partenaire commercial.",
+            "Notre indépendance nous permet de défendre exclusivement vos intérêts tout au long de votre projet."
+          ]
+        }
+      ]
+    },
     "services": {
       "eyebrow": "Crédit et financement",
       "title": "Services de financement",
       "body": "Crédit immobilier, financement professionnel, équipement, affacturage ou regroupement de crédits : un premier échange permet d'identifier les pistes adaptées.",
+      "moreCta": "Pour d'autres solutions de financement, contactez-nous",
       "items": [
         {
           "title": "Crédit immobilier",
@@ -72,6 +111,12 @@
           "body": "Pour la création, la trésorerie ou le développement d'activité. Le dossier est préparé autour de la situation de l'entreprise, de l'usage des fonds et des documents disponibles.",
           "image": "/assets/yicredit/services/service-business-loan.webp",
           "alt": "Documents de financement et calculatrice"
+        },
+        {
+          "title": "Trésorerie court terme",
+          "body": "Solution de trésorerie court terme YICREDIT pour entreprises : jusqu'à 50 000 €, sur une durée de 6 mois. Adaptée aux besoins temporaires de financement.",
+          "image": "/assets/yicredit/services/service-business-loan.webp",
+          "alt": "Documents pour trésorerie court terme d'entreprise"
         },
         {
           "title": "Financement d'équipement",
@@ -105,64 +150,89 @@
         }
       ]
     },
+    "warning": {
+      "title": "YICREDIT vous rappelle :",
+      "body": "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
+    },
     "process": {
-      "eyebrow": "Démarche",
-      "title": "Une démarche simple et structurée",
-      "body": "Chaque étape vise à rendre votre demande plus claire avant présentation.",
+      "eyebrow": "YICREDIT",
+      "title": "Processus de service",
+      "body": "Un cadre clair pour comprendre nos honoraires, préparer votre dossier et suivre votre demande.",
       "items": [
         {
           "step": "01",
-          "title": "Comprendre le projet",
-          "body": "Objectif, montant, délai et situation générale.",
+          "title": "Contactez-nous",
+          "body": "Contactez-nous par email, téléphone ou messagerie afin de comprendre notre service, notre fonctionnement et nos honoraires.",
           "image": "/assets/yicredit/process/process-consultation.webp",
-          "alt": "Conseiller échangeant avec un client"
+          "alt": "Client contactant YICREDIT pour une première demande"
         },
         {
           "step": "02",
-          "title": "Constituer le dossier",
-          "body": "Sélection des pièces utiles et vérification des éléments clés.",
+          "title": "Préciser le besoin",
+          "body": "Nous échangeons sur votre objectif, le montant recherché, le calendrier et votre situation afin d'identifier les pistes adaptées.",
           "image": "/assets/yicredit/process/process-documents.webp",
-          "alt": "Documents de financement organisés"
+          "alt": "Analyse d'un besoin de financement"
         },
         {
           "step": "03",
-          "title": "Orienter la demande",
-          "body": "Recherche d'organismes ou de solutions adaptés au profil.",
+          "title": "Préparer le dossier",
+          "body": "Nous préparons les documents avec vous et restons disponibles pour fournir les informations utiles au fil du dossier.",
           "image": "/assets/yicredit/process/process-bank-matching.webp",
-          "alt": "Réunion avec un organisme financier"
+          "alt": "Préparation commune des documents de financement"
         },
         {
           "step": "04",
-          "title": "Suivre les échanges",
-          "body": "Accompagnement sur les retours, compléments et étapes suivantes.",
+          "title": "Orienter et suivre",
+          "body": "Nous mobilisons nos canaux spécialisés pour faire avancer votre demande et rechercher le meilleur résultat possible.",
           "image": "/assets/yicredit/process/process-approval.webp",
-          "alt": "Signature d'un dossier de financement"
+          "alt": "Suivi du dossier et des retours de financement"
         }
       ]
     },
     "contact": {
-      "eyebrow": "Service multilingue · Accompagnement professionnel",
-      "title": "Échanger sur votre projet de financement",
-      "body": "Présentez votre situation et votre objectif. Nous vous indiquerons les premières pistes à étudier.",
+      "eyebrow": "Coordonnées",
+      "title": "Contacter YICREDIT",
+      "body": "Le téléphone et l'email sont les moyens de contact prioritaires. WeChat et WhatsApp peuvent ensuite faciliter les échanges et le suivi du dossier.",
       "phone": "06 64 97 45 29",
       "email": "xucheng@dandelion-intl.com",
-      "channels": [
+      "primary": [
         {
           "label": "Téléphone",
-          "value": "06 64 97 45 29"
+          "value": "06 64 97 45 29",
+          "note": "Canal prioritaire pour présenter rapidement votre demande.",
+          "href": "tel:+33664974529"
         },
         {
           "label": "Email",
-          "value": "xucheng@dandelion-intl.com"
-        },
-        {
-          "label": "WeChat",
-          "value": "Scannez pour ajouter Mr. Victor"
+          "value": "xucheng@dandelion-intl.com",
+          "note": "Adapté pour envoyer une demande, des pièces ou un dossier.",
+          "href": "mailto:xucheng@dandelion-intl.com"
         }
       ],
-      "qrAlt": "QR code WeChat de consultation YICREDIT",
-      "cta": "Scanner pour nous contacter",
-      "emailCta": "Envoyer un email"
+      "qrTitle": "Canaux complémentaires",
+      "qrBody": "Les QR codes WeChat et WhatsApp correspondent à deux moyens de contact distincts. Scannez celui qui correspond à votre mode d'échange.",
+      "qrChannels": [
+        {
+          "label": "WeChat",
+          "lines": [
+            "QR code WeChat",
+            "Ajouter Mr. Victor"
+          ],
+          "image": "/assets/yicredit/contact/qr-wechat-mr-victor.png",
+          "imageAlt": "QR code WeChat pour ajouter Mr. Victor"
+        },
+        {
+          "label": "WhatsApp",
+          "lines": [
+            "QR code WhatsApp",
+            "Ajouter Xu Cheng"
+          ],
+          "image": "/assets/yicredit/contact/qr-whatsapp-xu-cheng.png",
+          "imageAlt": "QR code WhatsApp pour ajouter Xu Cheng",
+          "href": "https://wa.me/qr/HMZWJ6CQTDE5H1",
+          "action": "Ouvrir WhatsApp"
+        }
+      ]
     },
     "footer": {
       "company": "YICREDIT SAS",

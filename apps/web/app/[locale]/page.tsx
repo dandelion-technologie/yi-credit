@@ -3,7 +3,6 @@ import {
   BriefcaseBusiness,
   CheckCircle2,
   ChevronDown,
-  ClipboardCheck,
   FileText,
   Home,
   Landmark,
@@ -43,6 +42,17 @@ type ServiceItem = {
   alt: string;
 };
 
+type AdvantageItem = {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+};
+
+type WarningCopy = {
+  title: string;
+  body: string;
+};
+
 type ProcessItem = {
   step: string;
   title: string;
@@ -51,13 +61,24 @@ type ProcessItem = {
   alt: string;
 };
 
-type ContactChannel = {
+type PrimaryContact = {
   label: string;
   value: string;
+  note: string;
+  href: string;
 };
 
-const serviceIcons = [Home, BriefcaseBusiness, Utensils, WalletCards, RefreshCw, Landmark, FileText];
-const processIcons = [MessageCircle, FileText, Landmark, ClipboardCheck];
+type QrContact = {
+  label: string;
+  lines: string[];
+  image?: string;
+  imageAlt?: string;
+  href?: string;
+  action?: string;
+};
+
+const serviceIcons = [Home, BriefcaseBusiness, WalletCards, Utensils, CheckCircle2, RefreshCw, Landmark, FileText];
+const processIcons = [Phone, MessageCircle, FileText, Landmark];
 
 export default async function HomePage({ params: { locale } }: HomePageProps) {
   unstable_setRequestLocale(locale);
@@ -65,9 +86,12 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
 
   const heroStats = t.raw("hero.stats") as HeroStat[];
   const heroQuickLinks = t.raw("hero.quickLinks") as HeroQuickLink[];
+  const advantages = t.raw("advantages.items") as AdvantageItem[];
   const services = t.raw("services.items") as ServiceItem[];
+  const warning = t.raw("warning") as WarningCopy;
   const processSteps = t.raw("process.items") as ProcessItem[];
-  const contactChannels = t.raw("contact.channels") as ContactChannel[];
+  const primaryContacts = t.raw("contact.primary") as PrimaryContact[];
+  const qrContacts = t.raw("contact.qrChannels") as QrContact[];
 
   return (
     <main className="bg-yi-paper text-yi-ink">
@@ -206,6 +230,58 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
         </div>
       </section>
 
+      <section data-nav-theme="light" id="advantages" className="bg-white px-5 py-20 md:px-8 md:py-28">
+        <div className="mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+          <div data-reveal="left" className="lg:sticky lg:top-32">
+            <h2 className="max-w-xl font-serif text-4xl font-semibold leading-tight text-yi-ink md:text-6xl">
+              {t("advantages.title")}
+            </h2>
+            <p className="mt-7 max-w-lg text-base leading-8 text-yi-slate md:text-lg">{t("advantages.summary")}</p>
+          </div>
+
+          <div data-reveal="right" className="border border-yi-line bg-yi-paper p-6 shadow-2xl shadow-yi-ink/10 md:p-9">
+            {advantages.slice(0, 1).map((item) => (
+              <article key={item.title}>
+                <h3 className="text-2xl font-semibold leading-tight text-yi-ink">{item.title}</h3>
+                <div className="mt-5 space-y-4 text-base leading-8 text-yi-slate">
+                  {item.paragraphs.map((paragraph, index) => (
+                    <p key={`${item.title}-${index}`}>{paragraph}</p>
+                  ))}
+                </div>
+              </article>
+            ))}
+
+            <details className="group mt-8 border-t border-yi-line pt-6">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-bold uppercase tracking-[0.18em] text-yi-blue transition hover:text-yi-ink [&::-webkit-details-marker]:hidden">
+                {t("advantages.expand")}
+                <ChevronDown size={18} className="shrink-0 transition group-open:rotate-180" />
+              </summary>
+              <div className="mt-8 grid gap-8">
+                {advantages.slice(1).map((item) => (
+                  <article key={item.title} className="border-t border-yi-line pt-7 first:border-t-0 first:pt-0">
+                    <h3 className="text-xl font-semibold leading-tight text-yi-ink">{item.title}</h3>
+                    <div className="mt-4 space-y-4 text-base leading-8 text-yi-slate">
+                      {item.paragraphs.map((paragraph, index) => (
+                        <p key={`${item.title}-${index}`}>{paragraph}</p>
+                      ))}
+                      {item.bullets ? (
+                        <ul className="grid gap-2 pl-5">
+                          {item.bullets.map((bullet) => (
+                            <li key={bullet} className="list-disc">
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section data-nav-theme="light" id="services" className="bg-yi-porcelain px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1440px]">
           <div data-reveal="up" className="mx-auto max-w-3xl text-center">
@@ -216,14 +292,15 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
             <p className="mt-6 text-base leading-8 text-yi-slate">{t("services.body")}</p>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-12">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-6">
             {services.map((service, index) => {
               const Icon = serviceIcons[index] ?? CheckCircle2;
-              const columnClass = index < 2 || index > 4 ? "xl:col-span-6" : "xl:col-span-4";
+              const columnClass = index < 2 ? "xl:col-span-3" : "xl:col-span-2";
 
               return (
-                <article
+                <a
                   key={service.title}
+                  href="#contact"
                   data-reveal="up"
                   style={{ transitionDelay: `${index * 70}ms` }}
                   className={`group relative min-h-[430px] overflow-hidden bg-yi-ink text-white ${columnClass}`}
@@ -243,14 +320,29 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                     <h3 className="text-2xl font-semibold">{service.title}</h3>
                     <p className="mt-4 max-w-md text-sm leading-7 text-white/75">{service.body}</p>
                   </div>
-                </article>
+                </a>
               );
             })}
+          </div>
+
+          <div data-reveal="up" className="mt-8 flex justify-center">
+            <a
+              href="#contact"
+              className="inline-flex min-h-12 items-center justify-center gap-2 bg-yi-ink px-7 text-sm font-bold uppercase tracking-[0.16em] text-white transition hover:bg-yi-blue"
+            >
+              {t("services.moreCta")}
+              <ArrowRight size={16} />
+            </a>
+          </div>
+
+          <div data-reveal="up" className="mt-8 border border-yi-gold/50 bg-white p-6 shadow-xl shadow-yi-ink/10 md:p-8">
+            <p className="text-xl font-semibold leading-8 text-yi-ink">{warning.title}</p>
+            <p className="mt-3 text-lg leading-8 text-yi-slate">{warning.body}</p>
           </div>
         </div>
       </section>
 
-      <section data-nav-theme="light" id="process" className="bg-yi-porcelain px-5 py-20 md:px-8 md:py-28">
+      <section data-nav-theme="light" id="process" className="bg-white px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-[1440px]">
           <div data-reveal="up" className="mx-auto max-w-3xl text-center">
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-yi-blue">{t("process.eyebrow")}</p>
@@ -260,7 +352,7 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
             <p className="mt-6 text-base leading-8 text-yi-slate">{t("process.body")}</p>
           </div>
 
-          <div className="mt-14 grid gap-px overflow-hidden border border-yi-line bg-yi-line lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 lg:grid-cols-4">
             {processSteps.map((step, index) => {
               const Icon = processIcons[index] ?? CheckCircle2;
 
@@ -269,7 +361,7 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                   key={step.step}
                   data-reveal="up"
                   style={{ transitionDelay: `${index * 80}ms` }}
-                  className="group bg-white"
+                  className="group border border-yi-line bg-yi-paper"
                 >
                   <div className="relative overflow-hidden">
                     <Image
@@ -279,13 +371,15 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
                       height={1000}
                       className="aspect-[8/5] w-full object-cover transition duration-700 group-hover:scale-[1.04]"
                     />
-                    <div className="absolute left-5 top-5 flex h-11 w-11 items-center justify-center bg-white/90 text-yi-blue shadow-lg shadow-yi-ink/10">
-                      <Icon size={20} />
-                    </div>
+                    <p className="absolute bottom-0 left-0 bg-yi-ink px-5 py-3 text-sm font-bold uppercase tracking-[0.24em] text-yi-gold">
+                      {step.step}
+                    </p>
                   </div>
                   <div className="p-6 md:p-7">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-yi-gold">{step.step}</p>
-                    <h3 className="mt-4 text-xl font-semibold text-yi-ink">{step.title}</h3>
+                    <div className="flex h-11 w-11 items-center justify-center border border-yi-blue/20 bg-white text-yi-blue shadow-lg shadow-yi-ink/5">
+                      <Icon size={20} />
+                    </div>
+                    <h3 className="mt-5 text-xl font-semibold text-yi-ink">{step.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-yi-slate">{step.body}</p>
                   </div>
                 </article>
@@ -305,37 +399,87 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
         />
         <div className="absolute inset-0 bg-yi-ink/30" />
 
-        <div className="relative mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[1fr_430px] lg:items-center">
-          <div data-reveal="left" className="max-w-2xl">
+        <div className="relative mx-auto max-w-[1280px]">
+          <div data-reveal="left" className="max-w-3xl">
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-yi-gold">{t("contact.eyebrow")}</p>
             <h2 className="mt-5 font-serif text-4xl font-semibold leading-tight md:text-6xl">{t("contact.title")}</h2>
             <p className="mt-7 text-base leading-8 text-white/80 md:text-lg">{t("contact.body")}</p>
-
-            <div className="mt-10 grid gap-px overflow-hidden border border-white/20 bg-white/10 sm:grid-cols-3">
-              {contactChannels.map((channel, index) => {
-                const Icon = index === 0 ? Phone : index === 1 ? Mail : MessageCircle;
-
-                return (
-                  <div key={channel.label} className="bg-yi-ink/60 p-5 backdrop-blur-md">
-                    <Icon className="text-yi-gold" size={22} />
-                    <p className="mt-3 text-[11px] uppercase tracking-[0.22em] text-white/50">{channel.label}</p>
-                    <p className="mt-2 break-words text-sm font-semibold leading-6">{channel.value}</p>
-                  </div>
-                );
-              })}
-            </div>
           </div>
 
-          <aside data-reveal="right" className="bg-white p-5 text-center text-yi-ink shadow-2xl shadow-yi-ink/40 md:p-6">
-            <Image
-              src="/assets/yicredit/contact/qr-wechat-mr-victor.png"
-              alt={t("contact.qrAlt")}
-              width={1000}
-              height={1000}
-              className="mx-auto aspect-square w-full max-w-[320px] object-contain"
-            />
-            <p className="mx-auto mt-5 max-w-xs text-sm font-semibold leading-6">{t("contact.cta")}</p>
-          </aside>
+          <div data-reveal="up" className="mt-10 grid gap-4 md:grid-cols-2">
+            {primaryContacts.map((contact, index) => {
+              const Icon = index === 0 ? Phone : Mail;
+
+              return (
+                <a
+                  key={contact.label}
+                  href={contact.href}
+                  className="group flex min-h-40 flex-col justify-between border border-white/25 bg-white p-6 text-yi-ink shadow-2xl shadow-yi-ink/25 transition hover:border-yi-gold hover:bg-yi-paper md:p-8"
+                >
+                  <span className="flex items-center justify-between gap-5">
+                    <span className="flex size-12 items-center justify-center bg-yi-ink text-yi-gold">
+                      <Icon size={23} />
+                    </span>
+                    <ArrowRight className="text-yi-slate transition group-hover:translate-x-1 group-hover:text-yi-blue" size={20} />
+                  </span>
+                  <span className="mt-8 block">
+                    <span className="block text-[12px] font-bold uppercase tracking-[0.24em] text-yi-blue">
+                      {contact.label}
+                    </span>
+                    <span className="mt-3 block break-words text-2xl font-semibold leading-tight md:text-3xl">
+                      {contact.value}
+                    </span>
+                    <span className="mt-3 block text-sm leading-6 text-yi-slate">{contact.note}</span>
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+
+          <div data-reveal="up" className="mt-12 border-t border-white/20 pt-8">
+            <p className="text-xl font-semibold text-white">{t("contact.qrTitle")}</p>
+            <p className="mt-2 max-w-2xl text-sm leading-7 text-white/65">{t("contact.qrBody")}</p>
+
+            <div className="mt-6 grid max-w-5xl gap-4 lg:grid-cols-2">
+              {qrContacts.map((contact) => (
+                <article
+                  key={contact.label}
+                  className="grid gap-5 border border-white/15 bg-white p-5 text-yi-ink shadow-xl shadow-yi-ink/20 sm:grid-cols-[180px_1fr] sm:items-center md:p-6"
+                >
+                  <div className="flex aspect-square items-center justify-center border border-yi-line bg-white p-2">
+                    <Image
+                      src={contact.image ?? ""}
+                      alt={contact.imageAlt ?? contact.label}
+                      width={1000}
+                      height={1000}
+                      className="aspect-square w-full object-contain"
+                    />
+                  </div>
+                  <div className="border-t border-yi-line pt-4 sm:border-l sm:border-t-0 sm:pl-5 sm:pt-0">
+                    <p className="text-[12px] font-bold uppercase tracking-[0.22em] text-yi-blue">{contact.label}</p>
+                    <p className="mt-3 text-base font-semibold leading-7 text-yi-ink">
+                      {contact.lines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                    </p>
+                    {contact.href && contact.action ? (
+                      <a
+                        href={contact.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="mt-5 inline-flex h-10 items-center gap-2 bg-yi-ink px-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition hover:bg-yi-blue"
+                      >
+                        {contact.action}
+                        <ArrowRight size={14} />
+                      </a>
+                    ) : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

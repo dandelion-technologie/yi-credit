@@ -7,6 +7,7 @@
     "nav": {
       "language": "Language",
       "services": "Services",
+      "advantages": "Advantages",
       "process": "Process",
       "contact": "Contact",
       "cta": "Contact us"
@@ -56,10 +57,54 @@
       "captionEyebrow": "Paris",
       "caption": "Registered in Paris, serving local clients across France."
     },
+    "advantages": {
+      "eyebrow": "Independent advice",
+      "title": "Why Choose YICREDIT?",
+      "summary": "We put clients first, keep pricing transparent, and provide independent, professional and objective guidance.",
+      "expand": "Read more",
+      "items": [
+        {
+          "title": "We Work Exclusively for Our Clients",
+          "paragraphs": [
+            "At YICREDIT, we are guided by one simple principle: our clients' interests always come first.",
+            "We operate under an independent business model. We do not receive commissions from financial institutions, and our professional advice is never influenced by commercial interests. Every recommendation we make is based solely on what is best for our clients.",
+            "We believe that trusted mortgage and financing advice should be driven by expertise—not by commissions."
+          ]
+        },
+        {
+          "title": "Transparent Pricing",
+          "paragraphs": [
+            "Transparency is the foundation of trust.",
+            "At YICREDIT, all service fees are clearly explained before any engagement begins.",
+            "You always know exactly what you are paying for and why."
+          ],
+          "bullets": [
+            "No hidden fees",
+            "No unexpected charges",
+            "No surprise costs"
+          ]
+        },
+        {
+          "title": "Independent · Professional · Objective",
+          "paragraphs": [
+            "Every financing project is unique.",
+            "We carefully assess your financial situation, financing objectives, and available market solutions to recommend the option that best suits your needs—not the one that generates the highest commission.",
+            "Independence is our principle. Professionalism is our responsibility. Protecting our clients' interests is our commitment."
+          ]
+        },
+        {
+          "title": "Our Commitment",
+          "paragraphs": [
+            "Your interests always come before commissions."
+          ]
+        }
+      ]
+    },
     "services": {
       "eyebrow": "Loan services",
       "title": "Financing services",
       "body": "Property loans, business financing, equipment, factoring and debt consolidation. A first conversation helps identify the right direction.",
+      "moreCta": "Contact us for more financing solutions",
       "items": [
         {
           "title": "Property Loans",
@@ -72,6 +117,12 @@
           "body": "For startup needs, working capital or business growth. The file is prepared around the company situation, use of funds and available financial documents.",
           "image": "/assets/yicredit/services/service-business-loan.webp",
           "alt": "Business financing documents and calculator"
+        },
+        {
+          "title": "Short-Term Business Cash Flow Loan",
+          "body": "YICREDIT short-term business cash flow loan: up to €50,000 over 6 months. Designed for temporary business financing needs.",
+          "image": "/assets/yicredit/services/service-business-loan.webp",
+          "alt": "Short-term business cash flow financing documents"
         },
         {
           "title": "Restaurant Equipment",
@@ -105,64 +156,89 @@
         }
       ]
     },
+    "warning": {
+      "title": "YICREDIT reminds you:",
+      "body": "A loan is a financial commitment and must be repaid. Please ensure that you have the ability to repay before entering into any credit agreement."
+    },
     "process": {
-      "eyebrow": "Process",
-      "title": "Four simple steps",
-      "body": "Simple process, clear priorities.",
+      "eyebrow": "YICREDIT",
+      "title": "Service process",
+      "body": "From first contact to channel follow-up, we handle your request through clear steps.",
       "items": [
         {
           "step": "01",
-          "title": "Tell us the need",
-          "body": "Purpose, amount and timing.",
+          "title": "Contact us",
+          "body": "Contact us by email, phone or messaging tools to understand our services, process and pricing.",
           "image": "/assets/yicredit/process/process-consultation.webp",
-          "alt": "Advisor discussing financing needs with client"
+          "alt": "Client contacting YICREDIT for financing services"
         },
         {
           "step": "02",
-          "title": "Prepare files",
-          "body": "Income, business or project documents.",
+          "title": "Explain the need",
+          "body": "Share your financing purpose, amount, timing and basic situation so we can analyze possible options.",
           "image": "/assets/yicredit/process/process-documents.webp",
-          "alt": "Financing documents being organized"
+          "alt": "Financing need analysis"
         },
         {
           "step": "03",
-          "title": "Match lenders",
-          "body": "We contact suitable institutions.",
+          "title": "Prepare documents together",
+          "body": "We prepare the file with you and provide timely information and follow-up guidance throughout the process.",
           "image": "/assets/yicredit/process/process-bank-matching.webp",
-          "alt": "Financial institution meeting scene"
+          "alt": "Client and advisor preparing financing documents together"
         },
         {
           "step": "04",
-          "title": "Follow up",
-          "body": "We help with feedback and next steps.",
+          "title": "Match channels and follow up",
+          "body": "We move the mandate forward through our dedicated channels, follow responses and work toward the most suitable outcome.",
           "image": "/assets/yicredit/process/process-approval.webp",
-          "alt": "Financing document signature"
+          "alt": "Financing channel matching and result follow-up"
         }
       ]
     },
     "contact": {
-      "eyebrow": "Clear service · Reliable guidance",
-      "title": "Contact us for loan options",
-      "body": "Share your basic situation. We will help you understand possible next steps.",
+      "eyebrow": "Contact",
+      "title": "Contact YICREDIT",
+      "body": "Phone and email are the priority contact methods. WeChat and WhatsApp can then support follow-up, document checks and ongoing communication.",
       "phone": "06 64 97 45 29",
       "email": "xucheng@dandelion-intl.com",
-      "channels": [
+      "primary": [
         {
           "label": "Phone",
-          "value": "06 64 97 45 29"
+          "value": "06 64 97 45 29",
+          "note": "Priority channel for a quick first discussion.",
+          "href": "tel:+33664974529"
         },
         {
           "label": "Email",
-          "value": "xucheng@dandelion-intl.com"
-        },
-        {
-          "label": "WeChat",
-          "value": "Scan to add Mr. Victor"
+          "value": "xucheng@dandelion-intl.com",
+          "note": "Best for sending requests, documents and project files.",
+          "href": "mailto:xucheng@dandelion-intl.com"
         }
       ],
-      "qrAlt": "YICREDIT WeChat consultation QR code",
-      "cta": "Scan to contact us",
-      "emailCta": "Send email"
+      "qrTitle": "Additional channels",
+      "qrBody": "The WeChat and WhatsApp QR codes refer to separate contact methods. Scan the one that matches your preferred channel.",
+      "qrChannels": [
+        {
+          "label": "WeChat",
+          "lines": [
+            "WeChat QR code",
+            "Add Mr. Victor"
+          ],
+          "image": "/assets/yicredit/contact/qr-wechat-mr-victor.png",
+          "imageAlt": "WeChat QR code to add Mr. Victor"
+        },
+        {
+          "label": "WhatsApp",
+          "lines": [
+            "WhatsApp QR code",
+            "Add Xu Cheng"
+          ],
+          "image": "/assets/yicredit/contact/qr-whatsapp-xu-cheng.png",
+          "imageAlt": "WhatsApp QR code to add Xu Cheng",
+          "href": "https://wa.me/qr/HMZWJ6CQTDE5H1",
+          "action": "Open WhatsApp"
+        }
+      ]
     },
     "footer": {
       "company": "YICREDIT SAS",
